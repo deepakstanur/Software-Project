@@ -108,3 +108,20 @@ Install the "Live Server" extension, right-click `index.html` → "Open with Liv
 - Product detail pages require a server to load JSON data via `fetch()`
 - All animations respect `prefers-reduced-motion` for accessibility
 - Minimum tap target size: 44×44px for mobile accessibility
+
+## Instagram Reels Setup
+
+**HOW TO ADD REEL COVER IMAGES:**
+1. Go to each Instagram reel link
+2. Take a screenshot of the reel thumbnail
+3. Crop to 540×960px (9:16 portrait)
+4. Convert to WebP at 80% quality (use squoosh.app)
+5. Name it: reel-001-cover.webp, reel-002-cover.webp, etc.
+6. Upload to: `assets/images/reels/` on GitHub
+
+**HOW TO ADD REEL VIDEOS (OPTIONAL):**
+1. Download reel video from Instagram (use snapinsta.app or similar)
+2. Compress to under 5MB (use handbrake.fr — free)
+3. Name it: reel-001.mp4, reel-002.mp4, etc.
+4. Upload to: `assets/videos/reels/` on GitHub
+5. If not added, clicking the reel will open Instagram instead — that's fine!

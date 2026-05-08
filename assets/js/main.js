@@ -21,45 +21,42 @@ const App = (() => {
 
   /* --- Announcement Bar --- */
   function initAnnouncement() {
-    const bar = document.getElementById('announcement-bar');
-    if (!bar) return;
-    if (localStorage.getItem('dc-announcement-dismissed') === 'true') {
-      bar.remove();
-      return;
+    const announcementBar = document.getElementById('announcement-bar');
+    const dismissBtn = document.getElementById('dismiss-announcement');
+    if (!announcementBar) return;
+
+    if (localStorage.getItem('announcementDismissed') === 'true') {
+      announcementBar.style.display = 'none';
     }
-    bar.style.display = 'block';
-    const btn = bar.querySelector('.dismiss-btn');
-    if (btn) {
-      btn.addEventListener('click', () => {
-        bar.style.display = 'none';
-        localStorage.setItem('dc-announcement-dismissed', 'true');
+
+    if (dismissBtn) {
+      dismissBtn.addEventListener('click', () => {
+        announcementBar.style.opacity = '0';
+        announcementBar.style.height = '0';
+        announcementBar.style.padding = '0';
+        announcementBar.style.overflow = 'hidden';
+        setTimeout(() => announcementBar.remove(), 300);
+        localStorage.setItem('announcementDismissed', 'true');
       });
     }
   }
 
-  /* --- Navigation Scroll Behavior --- */
-  function initNavigation() {
-    const nav = document.querySelector('.main-nav');
-    const hero = document.querySelector('.hero-section');
-    if (!nav) return;
+  /* --- Scroll to Top --- */
+  function initScrollToTop() {
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+    if (!scrollToTopBtn) return;
 
-    if (hero) {
-      // Use IntersectionObserver for hero
-      const observer = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting) {
-          nav.classList.add('nav-transparent');
-          nav.classList.remove('nav-solid');
-        } else {
-          nav.classList.remove('nav-transparent');
-          nav.classList.add('nav-solid');
-        }
-      }, { threshold: 0, rootMargin: '-80px 0px 0px 0px' });
-      observer.observe(hero);
-    } else {
-      // No hero: always solid
-      nav.classList.remove('nav-transparent');
-      nav.classList.add('nav-solid');
-    }
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 
   /* --- Mobile Menu --- */
@@ -141,7 +138,7 @@ const App = (() => {
     if (typeof WhatsApp !== 'undefined') WhatsApp.init(s);
     if (typeof WhatsApp !== 'undefined') WhatsApp.attachHandlers();
     initAnnouncement();
-    initNavigation();
+    initScrollToTop();
     initMobileMenu();
     initFloatingWA();
     initLightbox();

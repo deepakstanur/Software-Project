@@ -1,48 +1,47 @@
 /* ===== Dhalam Couture — WhatsApp Module ===== */
 
 const WhatsApp = (() => {
-  let whatsappNumber = '919876543210';
-  let defaultGreeting = 'Hi Dhalam Couture! 👋 I\'m interested in your collection.';
+  const WHATSAPP_NUMBER = '919526352500'; // no + sign in URL
 
-  function init(settings) {
-    if (settings?.contact?.whatsappNumber) {
-      whatsappNumber = settings.contact.whatsappNumber.replace('+', '');
-    }
-    if (settings?.contact?.whatsappGreeting) {
-      defaultGreeting = settings.contact.whatsappGreeting;
-    }
+  function buildWhatsAppURL(product, size, quantity = 1) {
+    const sizeLine = size ? `\nSize: ${size}` : '\nSize: (Please help me with sizing)';
+    const qtyLine = quantity > 1 ? `\nQuantity: ${quantity}` : '';
+    const message = 
+      `Hi Dhalam Couture! 🌿\n\n` +
+      `I'm interested in ordering:\n` +
+      `*${product.name}*\n` +
+      `Product ID: ${product.id}${sizeLine}${qtyLine}\n\n` +
+      `Kindly share availability and payment details. Thank you! 🙏`;
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   }
 
+  function buildGeneralWhatsAppURL() {
+    const message = 
+      `Hi Dhalam Couture! 🌿\n\n` +
+      `I found you on Instagram and I'd love to browse your collection.\n` +
+      `Could you help me with what's currently available? Thank you!`;
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  }
+
+  function buildRestockWhatsAppURL(product) {
+    const message = 
+      `Hi Dhalam Couture! 🌿\n\n` +
+      `I noticed that *${product.name}* (ID: ${product.id}) is currently out of stock.\n` +
+      `Could you please notify me when it's back? Thank you!`;
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  }
+
+  // Backwards compatibility for existing function names
   function buildURL(product, size, quantity) {
-    const lines = [];
-    lines.push(`Hi! I'd like to order from Dhalam Couture 🛍️`);
-    lines.push('');
-    lines.push(`*Product:* ${product.name}`);
-    lines.push(`*Product ID:* ${product.id}`);
-    if (size) lines.push(`*Size:* ${size}`);
-    if (quantity && quantity > 1) lines.push(`*Quantity:* ${quantity}`);
-    lines.push(`*Price:* ${product.currency}${product.price}`);
-    lines.push('');
-    lines.push('Please confirm availability and payment details. Thank you! 🙏');
-    const text = encodeURIComponent(lines.join('\n'));
-    return `https://wa.me/${whatsappNumber}?text=${text}`;
+    return buildWhatsAppURL(product, size, quantity);
   }
 
   function buildInquiryURL(product) {
-    const lines = [];
-    lines.push(`Hi! I have a question about this product:`);
-    lines.push('');
-    lines.push(`*${product.name}* (${product.id})`);
-    lines.push(`*Price:* ${product.currency}${product.price}`);
-    lines.push('');
-    lines.push('Could you help me with more details?');
-    const text = encodeURIComponent(lines.join('\n'));
-    return `https://wa.me/${whatsappNumber}?text=${text}`;
+    return buildWhatsAppURL(product, null, 1);
   }
 
   function buildGeneralURL() {
-    const text = encodeURIComponent(defaultGreeting);
-    return `https://wa.me/${whatsappNumber}?text=${text}`;
+    return buildGeneralWhatsAppURL();
   }
 
   function attachHandlers() {
@@ -54,7 +53,12 @@ const WhatsApp = (() => {
     });
   }
 
-  return { init, buildURL, buildInquiryURL, buildGeneralURL, attachHandlers };
+  function init(settings) {
+    // We hardcode the WhatsApp number above as requested in amendment 4, 
+    // but keep init for compatibility.
+  }
+
+  return { init, buildURL, buildInquiryURL, buildGeneralURL, attachHandlers, buildWhatsAppURL, buildGeneralWhatsAppURL, buildRestockWhatsAppURL };
 })();
 
 if (typeof module !== 'undefined') module.exports = WhatsApp;

@@ -17,6 +17,8 @@
   <meta name="twitter:title" content="Dhalam Couture — Premium Ethnic Fashion" />
   <meta name="twitter:description" content="Handpicked kurtis & sarees for the modern woman." />
   <meta name="twitter:image" content="assets/images/og-image.webp" />
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/brand/logo.png" type="image/png" sizes="32x32" />
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,7 +41,7 @@
     }
   </script>
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="assets/css/custom.css?v=6" />
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
@@ -63,20 +65,22 @@
 </head>
 <body class="bg-cream text-charcoal font-ui">
 
-  <!-- SECTION 1: Announcement Bar -->
-  <div id="announcement-bar" class="announcement-bar" style="display:none">
-    <span class="announcement-marquee">✨ Free Shipping on Orders Above ₹999 — Order on WhatsApp</span>
-    <button class="dismiss-btn" aria-label="Dismiss announcement"><i data-lucide="x" style="width:16px;height:16px"></i></button>
+  <!-- Layer 1: Announcement bar — part of normal document flow -->
+  <div id="announcement-bar" class="announcement-bar">
+    ✨ Free Shipping on orders above ₹999 — Order on WhatsApp
+    <button id="dismiss-announcement" aria-label="Dismiss">×</button>
   </div>
 
-  <!-- SECTION 2: Navigation -->
-  <nav class="main-nav nav-transparent flex items-center justify-between" aria-label="Main navigation">
+  <!-- Layer 2: Sticky nav BELOW the announcement bar — NOT fixed from top:0 -->
+  <header id="main-nav" class="main-nav nav-transparent flex items-center justify-between" aria-label="Main navigation">
     <!-- Mobile: hamburger left -->
     <button id="mobile-menu-toggle" class="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Open menu">
       <i data-lucide="menu" style="width:24px;height:24px"></i>
     </button>
     <!-- Logo -->
-    <a href="index.html" class="nav-logo">Dhalam Couture</a>
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/brand/logo.png" alt="Dhalam Couture" style="height: 64px;" class="lg:!h-[76px] rounded-full" />
+    </a>
     <!-- Desktop nav links -->
     <div class="hidden lg:flex items-center gap-8 font-ui text-sm tracking-wide">
       <a href="index.html" class="hover:opacity-70 transition-opacity">Home</a>
@@ -96,7 +100,7 @@
         <i data-lucide="message-circle" style="width:20px;height:20px"></i>
       </a>
     </div>
-  </nav>
+  </header>
 
   <!-- Mobile Menu Overlay -->
   <div id="mobile-menu-overlay" class="mobile-menu-overlay">
@@ -181,33 +185,29 @@
     </section>
 
     <!-- SECTION 8: Instagram Reels Gallery -->
-    <section class="section-padding bg-white" aria-label="Instagram Reels">
-      <div class="max-w-[1400px] mx-auto">
-        <h2 class="section-title mb-8 flex items-center gap-3 justify-center">
-          <i data-lucide="instagram" style="width:28px;height:28px;color:var(--color-deep-rose)"></i>
-          As Seen on @dhalamcouture
+    <section class="reels-section">
+      <div class="section-header text-center pt-8 pb-4">
+        <span class="section-eyebrow">Follow Along</span>
+        <h2 class="section-title">As Seen on
+          <a href="https://www.instagram.com/dhalamcouture/" 
+             target="_blank" rel="noopener noreferrer" 
+             class="instagram-handle">@dhalamcouture</a>
         </h2>
-        <div class="reel-scroll-container" id="reels-container">
-          <!-- Placeholder reels -->
-          <div class="reel-card" data-cover="" data-video="" style="background:linear-gradient(135deg,#D4A5A5,#B8869C)">
-            <div class="reel-play-btn"><div class="reel-play-circle"><i data-lucide="play" style="width:20px;height:20px"></i></div></div>
-          </div>
-          <div class="reel-card" data-cover="" data-video="" style="background:linear-gradient(135deg,#B8869C,#8B4565)">
-            <div class="reel-play-btn"><div class="reel-play-circle"><i data-lucide="play" style="width:20px;height:20px"></i></div></div>
-          </div>
-          <div class="reel-card" data-cover="" data-video="" style="background:linear-gradient(135deg,#8B4565,#2C2C2C)">
-            <div class="reel-play-btn"><div class="reel-play-circle"><i data-lucide="play" style="width:20px;height:20px"></i></div></div>
-          </div>
-          <div class="reel-card" data-cover="" data-video="" style="background:linear-gradient(135deg,#D4A5A5,#E8E4DF)">
-            <div class="reel-play-btn"><div class="reel-play-circle"><i data-lucide="play" style="width:20px;height:20px"></i></div></div>
-          </div>
-          <div class="reel-card" data-cover="" data-video="" style="background:linear-gradient(135deg,#E8E4DF,#B8869C)">
-            <div class="reel-play-btn"><div class="reel-play-circle"><i data-lucide="play" style="width:20px;height:20px"></i></div></div>
-          </div>
-          <div class="reel-card" data-cover="" data-video="" style="background:linear-gradient(135deg,#B8869C,#D4A5A5)">
-            <div class="reel-play-btn"><div class="reel-play-circle"><i data-lucide="play" style="width:20px;height:20px"></i></div></div>
-          </div>
-        </div>
+        <p class="section-subtitle text-stone">Watch our reels, fall in love with our pieces</p>
+      </div>
+
+      <!-- Horizontal scroll strip -->
+      <div class="reels-strip" role="list" aria-label="Instagram Reels">
+        <!-- JS populated from reels.json -->
+      </div>
+
+      <!-- View all CTA -->
+      <div class="reels-cta text-center pb-8">
+        <a href="https://www.instagram.com/dhalamcouture/" 
+           target="_blank" rel="noopener noreferrer"
+           class="btn-outline-gold">
+          View All on Instagram →
+        </a>
       </div>
     </section>
 
@@ -292,12 +292,37 @@
     <i data-lucide="message-circle" style="width:26px;height:26px"></i>
   </button>
 
+  <!-- Scroll to Top Button -->
+  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+    <i data-lucide="arrow-up" style="width:24px;height:24px"></i>
+  </button>
+
+  <!-- Reel Lightbox -->
+  <div id="reel-lightbox" class="reel-lightbox" role="dialog" aria-modal="true" aria-label="Reel viewer">
+    <button class="lightbox-close" onclick="closeReelLightbox()" aria-label="Close">×</button>
+    <div class="lightbox-content">
+      <video id="lightbox-video" controls playsinline preload="none"
+             style="max-height: 85vh; max-width: 100%; border-radius: 12px;">
+      </video>
+      <!-- Fallback when local video not downloaded yet -->
+      <a id="lightbox-instagram-link" 
+         href="#" target="_blank" rel="noopener noreferrer"
+         class="instagram-fallback-link" style="display:none;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        <span>Watch on Instagram</span>
+        <small>Local video not yet available</small>
+      </a>
+    </div>
+    <div class="lightbox-backdrop" onclick="closeReelLightbox()"></div>
+  </div>
+
   <!-- Scripts -->
   <script src="https://unpkg.com/lucide@latest" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="assets/js/whatsapp.js" defer></script>
   <script src="assets/js/products.js" defer></script>
+  <script src="assets/js/reels.js" defer></script>
   <script src="assets/js/animations.js" defer></script>
   <script src="assets/js/main.js" defer></script>
   <script>

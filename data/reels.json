@@ -1,0 +1,60 @@
+{
+  "reels": [
+    {
+      "id": "reel-001",
+      "instagramUrl": "https://www.instagram.com/reel/CT2BsncJAl9/",
+      "coverImage": "assets/images/reels/reel-001-cover.webp",
+      "videoFile": "assets/videos/reels/reel-001.mp4",
+      "caption": "Elegance in every drape",
+      "category": "saree"
+    },
+    {
+      "id": "reel-002",
+      "instagramUrl": "https://www.instagram.com/reel/C5kyB_HP-pl/",
+      "coverImage": "assets/images/reels/reel-002-cover.webp",
+      "videoFile": "assets/videos/reels/reel-002.mp4",
+      "caption": "New arrivals just dropped",
+      "category": "kurti"
+    },
+    {
+      "id": "reel-003",
+      "instagramUrl": "https://www.instagram.com/reel/C4QYz1dPrUk/",
+      "coverImage": "assets/images/reels/reel-003-cover.webp",
+      "videoFile": "assets/videos/reels/reel-003.mp4",
+      "caption": "The perfect festive look",
+      "category": "kurti"
+    },
+    {
+      "id": "reel-004",
+      "instagramUrl": "https://www.instagram.com/reel/CX2a5l8hFaq/",
+      "coverImage": "assets/images/reels/reel-004-cover.webp",
+      "videoFile": "assets/videos/reels/reel-004.mp4",
+      "caption": "Drape goals this season",
+      "category": "saree"
+    },
+    {
+      "id": "reel-005",
+      "instagramUrl": "https://www.instagram.com/reel/CXoKPc6FjHy/",
+      "coverImage": "assets/images/reels/reel-005-cover.webp",
+      "videoFile": "assets/videos/reels/reel-005.mp4",
+      "caption": "Curated just for you",
+      "category": "kurti"
+    },
+    {
+      "id": "reel-006",
+      "instagramUrl": "https://www.instagram.com/reel/CUAZtG1JzIs/",
+      "coverImage": "assets/images/reels/reel-006-cover.webp",
+      "videoFile": "assets/videos/reels/reel-006.mp4",
+      "caption": "Handpicked & heartfelt",
+      "category": "saree"
+    },
+    {
+      "id": "reel-007",
+      "instagramUrl": "https://www.instagram.com/reel/CT4hXFuJKLS/",
+      "coverImage": "assets/images/reels/reel-007-cover.webp",
+      "videoFile": "assets/videos/reels/reel-007.mp4",
+      "caption": "Style your story",
+      "category": "kurti"
+    }
+  ]
+}
