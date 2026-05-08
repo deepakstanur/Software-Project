@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product — Dhalam Couture</title>
+  <meta name="description" content="View product details and order via WhatsApp at Dhalam Couture." />
+  <link rel="canonical" href="https://dhalamcouture.com/product" />
+  <meta property="og:type" content="product" />
+  <meta property="og:title" content="Product — Dhalam Couture" />
+  <meta property="og:description" content="Premium ethnic fashion. Order via WhatsApp." />
+  <meta property="og:image" content="assets/images/og-image.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily: { display: ['Cormorant Garamond','serif'], ui: ['DM Sans','sans-serif'] },
+        colors: { cream:'#FAF7F2','warm-white':'#FFFFFF',blush:'#D4A5A5',mauve:'#B8869C','deep-rose':'#8B4565',charcoal:'#2C2C2C',stone:'#6B6B6B',border:'#E0DAD4','light-grey':'#E8E4DF','in-stock':'#4A7C59','low-stock':'#B5823A','out-of-stock':'#9E9E9E',whatsapp:'#25D366' }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <script id="product-jsonld" type="application/ld+json"></script>
+</head>
+<body class="bg-cream text-charcoal font-ui">
+
+  <!-- Announcement Bar -->
+  <div id="announcement-bar" class="announcement-bar" style="display:none">
+    <span class="announcement-marquee">✨ Free Shipping on Orders Above ₹999 — Order on WhatsApp</span>
+    <button class="dismiss-btn" aria-label="Dismiss"><i data-lucide="x" style="width:16px;height:16px"></i></button>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="main-nav nav-solid flex items-center justify-between" aria-label="Main navigation">
+    <button id="mobile-menu-toggle" class="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Open menu"><i data-lucide="menu" style="width:24px;height:24px"></i></button>
+    <a href="index.html" class="nav-logo">Dhalam Couture</a>
+    <div class="hidden lg:flex items-center gap-8 font-ui text-sm tracking-wide">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="https://www.instagram.com/dhalamcouture/" target="_blank" rel="noopener" aria-label="Instagram" class="min-w-[44px] min-h-[44px] flex items-center justify-center"><i data-lucide="instagram" style="width:20px;height:20px"></i></a>
+      <a href="#" data-wa-general class="hidden lg:inline-flex btn-pill btn-deep-rose text-sm"><i data-lucide="message-circle" style="width:16px;height:16px"></i> Order on WhatsApp</a>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu-overlay" class="mobile-menu-overlay">
+    <button id="mobile-menu-close" class="absolute top-6 right-6 min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Close menu"><i data-lucide="x" style="width:28px;height:28px"></i></button>
+    <a href="index.html">Home</a><a href="collections.html">Collections</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  </div>
+
+  <main>
+    <!-- Product Detail Container -->
+    <section class="pt-24 pb-12 px-5 lg:px-16" id="product-detail" aria-label="Product Detail">
+      <div class="max-w-[1400px] mx-auto" id="product-content">
+        <p class="text-center text-stone py-20">Loading product...</p>
+      </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="section-padding bg-white" id="related-section" aria-label="Related Products" style="display:none">
+      <div class="max-w-[1400px] mx-auto">
+        <h2 class="section-title mb-8">You May Also Like</h2>
+        <div id="related-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer section-padding" aria-label="Footer">
+    <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+      <div><div class="footer-logo mb-3">Dhalam Couture</div><p class="text-sm leading-relaxed opacity-80">Premium ethnic fashion, curated with love.</p></div>
+      <div><h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h3><ul class="space-y-2 text-sm"><li><a href="index.html">Home</a></li><li><a href="collections.html">Collections</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Follow Us</h3><a href="https://www.instagram.com/dhalamcouture/" target="_blank" rel="noopener" class="flex items-center gap-2 text-sm"><i data-lucide="instagram" style="width:20px;height:20px"></i> @dhalamcouture</a></div>
+    </div>
+    <div class="border-t border-white/10 pt-6 text-center text-xs opacity-60">© 2025 Dhalam Couture. All rights reserved.</div>
+  </footer>
+
+  <!-- Sticky Bottom Bar (mobile) -->
+  <div id="sticky-bottom-bar" class="sticky-bottom-bar lg:hidden">
+    <button id="sticky-size-btn" class="btn-pill btn-outline flex-1 text-sm">Select Size ▼</button>
+    <button id="sticky-wa-btn" class="btn-pill btn-whatsapp flex-1 text-sm">💬 Order on WhatsApp</button>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox-overlay" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" aria-label="Close"><i data-lucide="x" style="width:28px;height:28px"></i></button>
+    <div class="lightbox-content"></div>
+  </div>
+
+  <!-- Floating WhatsApp -->
+  <button id="floating-wa" class="floating-wa" aria-label="Chat on WhatsApp"><i data-lucide="message-circle" style="width:26px;height:26px"></i></button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="assets/js/whatsapp.js" defer></script>
+  <script src="assets/js/products.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script>
+  window.addEventListener('load', async () => {
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get('id');
+    if (!productId) { document.getElementById('product-content').innerHTML = '<p class="text-center text-stone py-20">No product specified.</p>'; return; }
+
+    const product = await Products.renderProductDetail(productId);
+    if (!product) return;
+
+    // Update page title and meta
+    document.title = `${product.name} — Dhalam Couture`;
+    document.querySelector('meta[name="description"]')?.setAttribute('content', product.description);
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', product.name);
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', product.description);
+
+    // JSON-LD
+    const jsonld = { "@context":"https://schema.org","@type":"Product","name":product.name,"description":product.description,"image":product.images,"brand":{"@type":"Brand","name":"Dhalam Couture"},"offers":{"@type":"Offer","price":product.price,"priceCurrency":"INR","availability":product.stockStatus==='out_of_stock'?'https://schema.org/OutOfStock':'https://schema.org/InStock'} };
+    document.getElementById('product-jsonld').textContent = JSON.stringify(jsonld);
+
+    const hasDiscount = product.originalPrice && product.originalPrice > product.price;
+    const catName = product.category === 'kurtis' ? 'Kurtis' : 'Sarees';
+    const subName = product.subcategory ? product.subcategory.charAt(0).toUpperCase() + product.subcategory.slice(1) : '';
+
+    // Build gallery
+    const placeholderColors = ['cream','blush','mauve','rose'];
+    const mainPlaceholder = placeholderColors[0];
+
+    let selectedSize = null;
+    let quantity = 1;
+
+    const html = `
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12" style="grid-template-columns: 1fr 1fr;">
+      <!-- LEFT: Gallery -->
+      <div class="lg:col-span-1" style="grid-column: 1;">
+        <div class="product-gallery-main" id="main-image-container">
+          <img src="${product.images[0]}" alt="${product.name}" width="600" height="800" loading="eager"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+               style="width:100%;height:100%;object-fit:cover" />
+          <div class="placeholder-img ${mainPlaceholder}" style="width:100%;height:100%;display:none">${product.name}</div>
+        </div>
+        <div class="product-thumbs" id="thumb-strip">
+          ${product.images.map((img, i) => `
+            <button class="product-thumb ${i===0?'active':''}" data-index="${i}" data-src="${img}" aria-label="View image ${i+1}">
+              <img src="${img}" alt="${product.name} view ${i+1}" width="72" height="96" loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+                   style="width:100%;height:100%;object-fit:cover" />
+              <div class="placeholder-img ${placeholderColors[i % placeholderColors.length]}" style="width:100%;height:100%;font-size:0.55rem;display:none">${i+1}</div>
+            </button>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- RIGHT: Info -->
+      <div class="lg:col-span-1" style="grid-column: 2;">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>›</span>
+          <a href="collections.html?category=${product.category}">${catName}</a><span>›</span>
+          <span>${subName}</span>
+        </nav>
+        <h1 class="font-display text-2xl lg:text-3xl font-semibold mb-3">${product.name}</h1>
+        <div class="text-xl font-medium mb-2">
+          ${product.currency}${product.price.toLocaleString('en-IN')}
+          ${hasDiscount ? `<span class="original-price text-base">${product.currency}${product.originalPrice.toLocaleString('en-IN')}</span>` : ''}
+        </div>
+        <div class="stock-badge ${product.stockStatus==='in_stock'?'stock-in':product.stockStatus==='low_stock'?'stock-low':'stock-out'} mb-4">
+          <span class="stock-dot"></span>
+          ${product.stockStatus==='in_stock'?'In Stock':product.stockStatus==='low_stock'?'Only '+product.stockCount+' left':'Out of Stock'}
+        </div>
+        <hr class="border-border mb-4" />
+
+        <div class="mb-4">
+          <span class="text-sm font-medium">Fabric:</span>
+          <span class="text-sm text-stone ml-1">${product.fabric}</span>
+        </div>
+        <div class="mb-4">
+          <span class="text-sm font-medium mb-2 block">Occasion:</span>
+          <div class="occasion-chips">${product.occasion.map(o=>`<span class="occasion-chip">${o}</span>`).join('')}</div>
+        </div>
+
+        <!-- Size Selector -->
+        <div class="mb-4" id="size-section">
+          <span class="text-sm font-medium mb-2 block">Size:</span>
+          <div class="size-pills" id="size-pills">
+            ${product.sizes.map(s => `
+              <button class="size-pill ${s.available?'':'disabled'}" data-size="${s.size}" ${s.available?'':'disabled aria-disabled="true"'} aria-label="Size ${s.size}">${s.size}</button>
+            `).join('')}
+          </div>
+          <p id="size-error" class="text-xs mt-2" style="color:var(--color-deep-rose);display:none">Please select a size</p>
+        </div>
+
+        <!-- Quantity -->
+        <div class="mb-6">
+          <span class="text-sm font-medium mb-2 block">Quantity:</span>
+          <div class="qty-selector">
+            <button class="qty-btn" id="qty-minus" aria-label="Decrease quantity">−</button>
+            <span class="qty-value" id="qty-value">1</span>
+            <button class="qty-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+
+        <!-- CTAs -->
+        <button id="order-wa-btn" class="btn-pill btn-whatsapp w-full text-base mb-3 justify-center" ${product.stockStatus==='out_of_stock'?'disabled style="opacity:0.5;cursor:not-allowed"':''}>
+          💬 Order on WhatsApp
+        </button>
+        <a href="https://www.instagram.com/dhalamcouture/" target="_blank" rel="noopener" class="btn-pill btn-outline w-full text-sm justify-center">
+          Ask on Instagram →
+        </a>
+        <hr class="border-border my-5" />
+
+        <!-- Accordions -->
+        <div class="accordion-item open" id="acc-description">
+          <button class="accordion-header" aria-expanded="true" onclick="toggleAccordion('acc-description')">Description <i data-lucide="chevron-down" style="width:18px;height:18px"></i></button>
+          <div class="accordion-body"><div class="accordion-body-inner">${product.description}</div></div>
+        </div>
+        <div class="accordion-item" id="acc-care">
+          <button class="accordion-header" aria-expanded="false" onclick="toggleAccordion('acc-care')">Care Instructions <i data-lucide="chevron-down" style="width:18px;height:18px"></i></button>
+          <div class="accordion-body"><div class="accordion-body-inner">${product.careInstructions}</div></div>
+        </div>
+        <div class="accordion-item" id="acc-delivery">
+          <button class="accordion-header" aria-expanded="false" onclick="toggleAccordion('acc-delivery')">Delivery Info <i data-lucide="chevron-down" style="width:18px;height:18px"></i></button>
+          <div class="accordion-body"><div class="accordion-body-inner">Estimated delivery: 5–7 business days. Free shipping on prepaid orders above ₹999.</div></div>
+        </div>
+
+        <!-- Share -->
+        <div class="flex items-center gap-4 mt-5">
+          <span class="text-sm text-stone">Share:</span>
+          <button onclick="window.open(WhatsApp.buildInquiryURL(window.__product),'_blank')" aria-label="Share on WhatsApp" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-whatsapp"><i data-lucide="message-circle" style="width:20px;height:20px"></i></button>
+          <button onclick="navigator.clipboard.writeText(window.location.href)" aria-label="Copy link" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-stone"><i data-lucide="link" style="width:20px;height:20px"></i></button>
+        </div>
+      </div>
+    </div>`;
+
+    document.getElementById('product-content').innerHTML = html;
+    window.__product = product;
+
+    // Size pill handlers
+    document.querySelectorAll('.size-pill:not(.disabled)').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.size-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        selectedSize = pill.dataset.size;
+        document.getElementById('size-error').style.display = 'none';
+        document.getElementById('sticky-size-btn').textContent = `Size: ${selectedSize}`;
+      });
+    });
+
+    // Quantity handlers
+    document.getElementById('qty-minus')?.addEventListener('click', () => {
+      if (quantity > 1) { quantity--; document.getElementById('qty-value').textContent = quantity; }
+    });
+    document.getElementById('qty-plus')?.addEventListener('click', () => {
+      if (quantity < 10) { quantity++; document.getElementById('qty-value').textContent = quantity; }
+    });
+
+    // WhatsApp order button
+    const orderBtn = document.getElementById('order-wa-btn');
+    const stickyWaBtn = document.getElementById('sticky-wa-btn');
+    const handleOrder = () => {
+      if (!selectedSize) {
+        const section = document.getElementById('size-section');
+        section.classList.add('shake');
+        document.getElementById('size-error').style.display = 'block';
+        setTimeout(() => section.classList.remove('shake'), 400);
+        section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      const url = WhatsApp.buildURL(product, selectedSize, quantity);
+      window.open(url, '_blank');
+    };
+    orderBtn?.addEventListener('click', handleOrder);
+    stickyWaBtn?.addEventListener('click', handleOrder);
+
+    // Sticky size button scrolls to size section
+    document.getElementById('sticky-size-btn')?.addEventListener('click', () => {
+      document.getElementById('size-section')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    // Thumbnail click - swap main image
+    document.querySelectorAll('.product-thumb').forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+        const src = thumb.dataset.src;
+        const mainContainer = document.getElementById('main-image-container');
+        const mainImg = mainContainer.querySelector('img');
+        if (mainImg && src) { mainImg.src = src; mainImg.style.display = 'block'; }
+      });
+    });
+
+    // Main image click → lightbox
+    document.getElementById('main-image-container')?.addEventListener('click', () => {
+      // With real images: App.openImageLightbox(currentImageSrc, product.name);
+    });
+
+    // Sticky bottom bar visibility
+    const galleryEl = document.getElementById('main-image-container');
+    const stickyBar = document.getElementById('sticky-bottom-bar');
+    if (galleryEl && stickyBar) {
+      const observer = new IntersectionObserver(([entry]) => {
+        stickyBar.classList.toggle('visible', !entry.isIntersecting);
+      }, { threshold: 0 });
+      observer.observe(galleryEl);
+    }
+
+    // Related products
+    const related = Products.getRelatedProducts(product, 4);
+    if (related.length > 0) {
+      document.getElementById('related-section').style.display = 'block';
+      Products.renderProductGrid(related, '#related-grid');
+    }
+
+    // Init icons
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  });
+
+  function toggleAccordion(id) {
+    const item = document.getElementById(id);
+    if (!item) return;
+    const isOpen = item.classList.contains('open');
+    item.classList.toggle('open');
+    const btn = item.querySelector('.accordion-header');
+    if (btn) btn.setAttribute('aria-expanded', !isOpen);
+  }
+  </script>
+</body>
+</html>

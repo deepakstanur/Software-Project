@@ -1,0 +1,52 @@
+{
+  "categories": [
+    {
+      "id": "kurtis",
+      "name": "Kurtis",
+      "slug": "kurtis",
+      "description": "Elegant kurtis for every occasion — from daily wear to festive charm.",
+      "image": "assets/images/categories/kurtis-category.webp",
+      "subcategories": [
+        {
+          "id": "anarkali",
+          "name": "Anarkali",
+          "slug": "anarkali"
+        },
+        {
+          "id": "straight",
+          "name": "Straight",
+          "slug": "straight"
+        },
+        {
+          "id": "a-line",
+          "name": "A-Line",
+          "slug": "a-line"
+        }
+      ]
+    },
+    {
+      "id": "sarees",
+      "name": "Sarees",
+      "slug": "sarees",
+      "description": "Timeless sarees woven with tradition and draped with grace.",
+      "image": "assets/images/categories/sarees-category.webp",
+      "subcategories": [
+        {
+          "id": "silk",
+          "name": "Silk",
+          "slug": "silk"
+        },
+        {
+          "id": "cotton",
+          "name": "Cotton",
+          "slug": "cotton"
+        },
+        {
+          "id": "organza",
+          "name": "Organza",
+          "slug": "organza"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "products": [
+    {
+      "id": "krt-001",
+      "name": "Ivory Block Print Anarkali Kurti",
+      "slug": "ivory-block-print-anarkali-kurti",
+      "category": "kurtis",
+      "subcategory": "anarkali",
+      "price": 1299,
+      "originalPrice": 1799,
+      "currency": "₹",
+      "fabric": "Cotton",
+      "occasion": ["Festive", "Casual", "Daily Wear"],
+      "description": "A stunning ivory anarkali kurti adorned with intricate block prints inspired by Rajasthani heritage. The flowing silhouette flatters every body type, while the breathable cotton fabric keeps you comfortable all day long.",
+      "careInstructions": "Hand wash separately in cold water. Do not bleach. Dry in shade. Iron on medium heat.",
+      "sizes": [
+        { "size": "S", "available": true },
+        { "size": "M", "available": true },
+        { "size": "L", "available": true },
+        { "size": "XL", "available": true },
+        { "size": "XXL", "available": false }
+      ],
+      "images": [
+        "assets/images/products/krt-001/krt-001-1.webp"
+      ],
+      "stockStatus": "in_stock",
+      "stockCount": null,
+      "hotSelling": true,
+      "newArrival": true,
+      "featured": false
+    },
+    {
+      "id": "krt-002",
+      "name": "Rose Chanderi Straight Kurti",
+      "slug": "rose-chanderi-straight-kurti",
+      "category": "kurtis",
+      "subcategory": "straight",
+      "price": 999,
+      "originalPrice": null,
+      "currency": "₹",
+      "fabric": "Chanderi Silk",
+      "occasion": ["Office Wear", "Casual", "Semi-Formal"],
+      "description": "Effortlessly elegant, this rose-toned straight kurti in luxurious Chanderi silk is your go-to for understated sophistication. The subtle sheen catches the light beautifully.",
+      "careInstructions": "Dry clean recommended. Hand wash gently in cold water. Do not wring. Iron on low heat.",
+      "sizes": [
+        { "size": "S", "available": true },
+        { "size": "M", "available": true },
+        { "size": "L", "available": true },
+        { "size": "XL", "available": true },
+        { "size": "XXL", "available": true }
+      ],
+      "images": [
+        "assets/images/products/krt-002/krt-002-1.webp"
+      ],
+      "stockStatus": "in_stock",
+      "stockCount": null,
+      "hotSelling": true,
+      "newArrival": false,
+      "featured": false
+    },
+    {
+      "id": "krt-003",
+      "name": "Indigo Bandhani Kurti Set",
+      "slug": "indigo-bandhani-kurti-set",
+      "category": "kurtis",
+      "subcategory": "a-line",
+      "price": 2199,
+      "originalPrice": 2999,
+      "currency": "₹",
+      "fabric": "Cotton",
+      "occasion": ["Festive", "Wedding Guest", "Pooja"],
+      "description": "A mesmerizing indigo kurti set featuring authentic Bandhani tie-dye work from Gujarat artisans. Includes a flowing A-line kurti and matching dupatta with hand-tied patterns.",
+      "careInstructions": "Hand wash separately in cold water. Colors may bleed initially. Dry in shade. Iron on medium heat.",
+      "sizes": [
+        { "size": "S", "available": true },
+        { "size": "M", "available": true },
+        { "size": "L", "available": false },
+        { "size": "XL", "available": true },
+        { "size": "XXL", "available": false }
+      ],
+      "images": [
+        "assets/images/products/krt-003/krt-003-1.webp"
+      ],
+      "stockStatus": "low_stock",
+      "stockCount": 2,
+      "hotSelling": false,
+      "newArrival": true,
+      "featured": true
+    },
+    {
+      "id": "sar-001",
+      "name": "Kanjivaram Silk Saree Dusty Rose",
+      "slug": "kanjivaram-silk-saree-dusty-rose",
+      "category": "sarees",
+      "subcategory": "silk",
+      "price": 4999,
+      "originalPrice": 6499,
+      "currency": "₹",
+      "fabric": "Pure Silk",
+      "occasion": ["Wedding", "Reception", "Festive"],
+      "description": "A breathtaking Kanjivaram silk saree in romantic dusty rose, handwoven by master weavers of Kanchipuram. Rich zari border with traditional temple motifs in gold.",
+      "careInstructions": "Dry clean only. Store in muslin cloth. Avoid direct sunlight.",
+      "sizes": [{ "size": "Free Size", "available": true }],
+      "images": [
+        "assets/images/products/sar-001/sar-001-1.webp"
+      ],
+      "stockStatus": "in_stock",
+      "stockCount": null,
+      "hotSelling": true,
+      "newArrival": false,
+      "featured": true
+    },
+    {
+      "id": "sar-002",
+      "name": "Organza Embroidered Saree Ivory",
+      "slug": "organza-embroidered-saree-ivory",
+      "category": "sarees",
+      "subcategory": "organza",
+      "price": 3499,
+      "originalPrice": null,
+      "currency": "₹",
+      "fabric": "Organza",
+      "occasion": ["Cocktail Party", "Reception", "Engagement"],
+      "description": "Float through celebrations in this ethereal ivory organza saree with delicate floral threadwork and sequin accents. Modern yet timeless elegance.",
+      "careInstructions": "Dry clean only. Handle with care. Store on padded hanger or rolled in tissue paper.",
+      "sizes": [{ "size": "Free Size", "available": true }],
+      "images": [
+        "assets/images/products/sar-002/sar-002-1.webp"
+      ],
+      "stockStatus": "in_stock",
+      "stockCount": null,
+      "hotSelling": false,
+      "newArrival": true,
+      "featured": false
+    },
+    {
+      "id": "sar-003",
+      "name": "Cotton Handloom Saree Navy",
+      "slug": "cotton-handloom-saree-navy",
+      "category": "sarees",
+      "subcategory": "cotton",
+      "price": 1799,
+      "originalPrice": 2199,
+      "currency": "₹",
+      "fabric": "Handloom Cotton",
+      "occasion": ["Daily Wear", "Office Wear", "Casual"],
+      "description": "A timeless navy cotton handloom saree woven on traditional pit looms. Subtle golden zari stripes and contrasting border add understated luxury.",
+      "careInstructions": "Machine wash gentle cycle or hand wash cold. Mild detergent. Dry in shade. Iron medium heat.",
+      "sizes": [{ "size": "Free Size", "available": false }],
+      "images": [
+        "assets/images/products/sar-003/sar-003-1.webp"
+      ],
+      "stockStatus": "out_of_stock",
+      "stockCount": 0,
+      "hotSelling": false,
+      "newArrival": false,
+      "featured": false
+    }
+  ]
+}

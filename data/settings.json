@@ -1,0 +1,96 @@
+{
+  "brand": {
+    "name": "Dhalam Couture",
+    "tagline": "Premium Ethnic Fashion, Curated with Love",
+    "description": "Handpicked ethnic fashion for the modern woman. Kurtis, sarees, and more — crafted with elegance.",
+    "logo": "assets/images/logo.png",
+    "url": "https://dhalamcouture.com"
+  },
+  "contact": {
+    "whatsappNumber": "+919876543210",
+    "whatsappGreeting": "Hi Dhalam Couture! 👋 I'm interested in your collection. Can you help me?",
+    "instagram": "https://www.instagram.com/dhalamcouture/",
+    "instagramHandle": "@dhalamcouture",
+    "email": "hello@dhalamcouture.com"
+  },
+  "hero": {
+    "label": "New Collection 2025",
+    "headline": "Draped in Elegance",
+    "subheadline": "Handpicked ethnic fashion for the modern woman",
+    "ctaPrimary": {
+      "text": "Explore Collection →",
+      "link": "collections.html"
+    },
+    "ctaSecondary": {
+      "text": "Order on WhatsApp",
+      "link": "whatsapp"
+    },
+    "videoSrc": "assets/videos/hero-reel.mp4",
+    "posterSrc": "assets/images/hero/hero-poster.webp"
+  },
+  "announcement": {
+    "text": "✨ Free Shipping on Orders Above ₹999 — Order on WhatsApp",
+    "enabled": true
+  },
+  "offerBanner": {
+    "headline": "🚚 Free Shipping on all prepaid orders above ₹999",
+    "subtitle": "Handpicked pieces delivered to your doorstep",
+    "ctaText": "Chat with us →"
+  },
+  "whatsappCTA": {
+    "headline": "Have a question? We're just a message away.",
+    "subtext": "Chat with us on WhatsApp for sizing, availability, and custom orders.",
+    "buttonText": "💬 Chat on WhatsApp"
+  },
+  "delivery": {
+    "estimatedDays": "5-7 business days",
+    "freeShippingThreshold": 999
+  },
+  "seo": {
+    "defaultTitle": "Dhalam Couture — Premium Kurtis & Sarees | Ethnic Fashion Online",
+    "defaultDescription": "Shop premium handpicked kurtis and sarees at Dhalam Couture. Elegant ethnic fashion for the modern woman. Order via WhatsApp.",
+    "ogImage": "assets/images/og-image.webp"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/dhalamcouture/",
+    "whatsapp": "https://wa.me/919876543210"
+  },
+  "reels": [
+    {
+      "id": "reel-01",
+      "cover": "assets/images/reels/reel-01-cover.webp",
+      "video": "assets/videos/reels/reel-01.mp4",
+      "title": "Anarkali Styling Tips"
+    },
+    {
+      "id": "reel-02",
+      "cover": "assets/images/reels/reel-02-cover.webp",
+      "video": "assets/videos/reels/reel-02.mp4",
+      "title": "Saree Draping Guide"
+    },
+    {
+      "id": "reel-03",
+      "cover": "assets/images/reels/reel-03-cover.webp",
+      "video": "assets/videos/reels/reel-03.mp4",
+      "title": "New Arrivals Unboxing"
+    },
+    {
+      "id": "reel-04",
+      "cover": "assets/images/reels/reel-04-cover.webp",
+      "video": "assets/videos/reels/reel-04.mp4",
+      "title": "Festival Look Book"
+    },
+    {
+      "id": "reel-05",
+      "cover": "assets/images/reels/reel-05-cover.webp",
+      "video": "assets/videos/reels/reel-05.mp4",
+      "title": "Behind the Scenes"
+    },
+    {
+      "id": "reel-06",
+      "cover": "assets/images/reels/reel-06-cover.webp",
+      "video": "assets/videos/reels/reel-06.mp4",
+      "title": "Customer Favorites"
+    }
+  ]
+}
