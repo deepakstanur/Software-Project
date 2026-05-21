@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product — Dhalam Couture</title>
+  <title>Product | Dhalam Couture</title>
   <meta name="description" content="View product details and order via WhatsApp at Dhalam Couture." />
   <link rel="canonical" href="https://dhalamcouture.com/product" />
   <meta property="og:type" content="product" />
-  <meta property="og:title" content="Product — Dhalam Couture" />
+  <meta property="og:title" content="Product | Dhalam Couture" />
   <meta property="og:description" content="Premium ethnic fashion. Order via WhatsApp." />
   <meta property="og:image" content="assets/images/og-image.webp" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -30,7 +30,7 @@
 
   <!-- Announcement Bar -->
   <div id="announcement-bar" class="announcement-bar" style="display:none">
-    <span class="announcement-marquee">✨ Free Shipping on Orders Above ₹999 — Order on WhatsApp</span>
+    <span class="announcement-marquee">✨ Free Shipping on Orders Above ₹999 | Order on WhatsApp</span>
     <button class="dismiss-btn" aria-label="Dismiss"><i data-lucide="x" style="width:16px;height:16px"></i></button>
   </div>
 
@@ -116,7 +116,7 @@
     if (!product) return;
 
     // Update page title and meta
-    document.title = `${product.name} — Dhalam Couture`;
+    document.title = `${product.name} | Dhalam Couture`;
     document.querySelector('meta[name="description"]')?.setAttribute('content', product.description);
     document.querySelector('meta[property="og:title"]')?.setAttribute('content', product.name);
     document.querySelector('meta[property="og:description"]')?.setAttribute('content', product.description);
