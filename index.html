@@ -41,7 +41,7 @@
     }
   </script>
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/custom.css?v=6" />
+  <link rel="stylesheet" href="assets/css/custom.css?v=9" />
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
@@ -73,27 +73,33 @@
 
   <!-- Layer 2: Sticky nav BELOW the announcement bar — NOT fixed from top:0 -->
   <header id="main-nav" class="main-nav nav-transparent flex items-center justify-between" aria-label="Main navigation">
-    <!-- Mobile: hamburger left -->
-    <button id="mobile-menu-toggle" class="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Open menu">
-      <i data-lucide="menu" style="width:24px;height:24px"></i>
-    </button>
-    <!-- Logo -->
-    <a href="index.html" class="nav-logo">
-      <img src="assets/images/brand/logo.png" alt="Dhalam Couture" style="height: 64px;" class="lg:!h-[76px] rounded-full" />
-    </a>
-    <!-- Desktop nav links -->
-    <div class="hidden lg:flex items-center gap-8 font-ui text-sm tracking-wide">
-      <a href="index.html" class="hover:opacity-70 transition-opacity">Home</a>
-      <a href="collections.html" class="hover:opacity-70 transition-opacity">Collections</a>
-      <a href="about.html" class="hover:opacity-70 transition-opacity">About</a>
-      <a href="contact.html" class="hover:opacity-70 transition-opacity">Contact</a>
+    <!-- Left: Mobile Menu Toggle / Desktop Links -->
+    <div class="flex-1 flex justify-start items-center">
+      <button id="mobile-menu-toggle" class="lg:hidden min-w-[44px] min-h-[44px] flex items-center" aria-label="Open menu">
+        <i data-lucide="menu" style="width:24px;height:24px"></i>
+      </button>
+      <div class="hidden lg:flex items-center gap-8 font-ui text-sm tracking-wide">
+        <a href="index.html" class="hover:opacity-70 transition-opacity">Home</a>
+        <a href="collections.html" class="hover:opacity-70 transition-opacity">Collections</a>
+        <a href="about.html" class="hover:opacity-70 transition-opacity">About</a>
+        <a href="contact.html" class="hover:opacity-70 transition-opacity">Contact</a>
+      </div>
     </div>
-    <!-- Right icons -->
-    <div class="flex items-center gap-3">
+
+    <!-- Center: Logo + Name -->
+    <div class="flex-shrink-0 flex justify-center items-center">
+      <a href="index.html" class="nav-logo flex items-center gap-2 lg:gap-3">
+        <img src="assets/images/brand/logo.png" alt="Dhalam Couture Logo" style="height: 48px;" class="lg:!h-[64px] rounded-full" />
+        <span class="font-display text-[1.3rem] sm:text-2xl lg:text-3xl tracking-wide whitespace-nowrap">Dhalam Couture</span>
+      </a>
+    </div>
+
+    <!-- Right: Icons -->
+    <div class="flex-1 flex justify-end items-center gap-1 sm:gap-3">
       <a href="https://www.instagram.com/dhalamcouture/" target="_blank" rel="noopener" aria-label="Instagram" class="min-w-[44px] min-h-[44px] flex items-center justify-center hover:opacity-70 transition-opacity">
         <i data-lucide="instagram" style="width:20px;height:20px"></i>
       </a>
-      <a href="#" data-wa-general class="hidden lg:inline-flex btn-pill btn-deep-rose text-sm" aria-label="Order on WhatsApp">
+      <a href="#" data-wa-general class="hidden lg:inline-flex btn-pill btn-outline-white text-sm" aria-label="Order on WhatsApp">
         <i data-lucide="message-circle" style="width:16px;height:16px"></i> Order on WhatsApp
       </a>
       <a href="#" data-wa-general class="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center hover:opacity-70 transition-opacity" aria-label="WhatsApp">
@@ -117,12 +123,8 @@
   <main>
     <!-- SECTION 3: Hero -->
     <section class="hero-section" aria-label="Hero">
-      <!-- Desktop video background -->
-      <video class="hero-bg-video hidden md:block" autoplay muted loop playsinline poster="assets/images/hero/hero-poster.webp" loading="eager" fetchpriority="high">
-        <source src="assets/videos/hero-reel.mp4" type="video/mp4" />
-      </video>
-      <!-- Mobile poster -->
-      <img class="hero-bg-image md:hidden" src="assets/images/hero/hero-poster.webp" alt="Dhalam Couture fashion" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" loading="eager" fetchpriority="high" />
+      <!-- Background Image -->
+      <img class="hero-bg-image" src="assets/images/hero/hero-image.png" alt="Dhalam Couture Chettinad Saree Collection" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" loading="eager" fetchpriority="high" />
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <p class="hero-label label-hero mb-4">New Collection 2025</p>
@@ -296,6 +298,25 @@
   <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
     <i data-lucide="arrow-up" style="width:24px;height:24px"></i>
   </button>
+
+  <!-- Reel Lightbox -->
+  <div id="reel-lightbox" class="reel-lightbox" role="dialog" aria-modal="true" aria-label="Reel viewer">
+    <button class="lightbox-close" onclick="closeReelLightbox()" aria-label="Close">×</button>
+    <div class="lightbox-content">
+      <video id="lightbox-video" controls playsinline preload="none"
+             style="max-height: 85vh; max-width: 100%; border-radius: 12px;">
+      </video>
+      <!-- Fallback when local video not downloaded yet -->
+      <a id="lightbox-instagram-link" 
+         href="#" target="_blank" rel="noopener noreferrer"
+         class="instagram-fallback-link" style="display:none;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        <span>Watch on Instagram</span>
+        <small>Local video not yet available</small>
+      </a>
+    </div>
+    <div class="lightbox-backdrop" onclick="closeReelLightbox()"></div>
+  </div>
 
   <!-- Reel Lightbox -->
   <div id="reel-lightbox" class="reel-lightbox" role="dialog" aria-modal="true" aria-label="Reel viewer">
