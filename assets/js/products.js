@@ -59,10 +59,11 @@ const Products = (() => {
 
   function renderProductCard(product) {
     const isOut = product.stockStatus === 'out_of_stock';
+    const isSaree = product.category === 'sarees';
     const hasDiscount = product.originalPrice && product.originalPrice > product.price;
     const badges = [];
-    if (product.newArrival) badges.push('<span class="product-card-badge badge-new">New</span>');
-    if (hasDiscount && !product.newArrival) badges.push('<span class="product-card-badge badge-sale">Sale</span>');
+    if (product.newArrival && !isSaree) badges.push('<span class="product-card-badge badge-new">New</span>');
+    if (hasDiscount && !product.newArrival && !isSaree) badges.push('<span class="product-card-badge badge-sale">Sale</span>');
 
     const imgSrc = product.images?.[0] || '';
     const placeholderBgs = ['cream', 'blush', 'mauve', 'rose'];
@@ -71,13 +72,13 @@ const Products = (() => {
     const waURL = typeof WhatsApp !== 'undefined' ? WhatsApp.buildInquiryURL(product) : '#';
 
     return `
-    <article class="product-card ${isOut ? 'out-of-stock' : ''}" data-product-id="${product.id}">
-      <a href="product.html?id=${product.id}" class="product-card-link" aria-label="View ${product.name}">
+    <article class="product-card ${isOut ? 'out-of-stock' : ''} ${isSaree ? 'is-coming-soon' : ''}" data-product-id="${product.id}">
+      <a href="${isSaree ? 'javascript:void(0)' : `product.html?id=${product.id}`}" class="product-card-link" aria-label="View ${product.name}">
         <div class="product-card-image">
           ${badges.join('')}
           <img src="${imgSrc}" alt="${product.name}" width="400" height="533" loading="lazy" decoding="async"
                data-placeholder-bg="${bgClass}" data-placeholder-name="${product.name}" />
-          ${!isOut ? `<a href="${waURL}" target="_blank" rel="noopener" class="product-card-wa" aria-label="Order ${product.name} on WhatsApp" onclick="event.stopPropagation()">
+          ${(!isOut && !isSaree) ? `<a href="${waURL}" target="_blank" rel="noopener" class="product-card-wa" aria-label="Order ${product.name} on WhatsApp" onclick="event.stopPropagation()">
             <i data-lucide="message-circle" style="width:20px;height:20px"></i>
           </a>` : ''}
         </div>
@@ -88,9 +89,15 @@ const Products = (() => {
             ${product.currency}${product.price.toLocaleString('en-IN')}
             ${hasDiscount ? `<span class="original-price">${product.currency}${product.originalPrice.toLocaleString('en-IN')}</span>` : ''}
           </div>
+          ${isSaree ? `
+          <div class="stock-badge stock-coming-soon">
+            <span class="stock-dot" style="background-color:var(--color-gold)"></span> Coming Soon
+          </div>
+          ` : `
           <div class="stock-badge ${getStockClass(product.stockStatus)}">
             <span class="stock-dot"></span> ${getStockLabel(product)}
           </div>
+          `}
         </div>
       </a>
     </article>`;

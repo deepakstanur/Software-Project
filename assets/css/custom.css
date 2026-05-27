@@ -191,16 +191,26 @@ button { cursor: pointer; font-family: var(--font-ui); border: none; background:
 
 /* --- Navigation --- */
 .main-nav {
-  position: absolute;
+  position: sticky;
+  top: 0;
   z-index: 200;
   width: 100%;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
   padding: 1rem 1.25rem;
 }
 .main-nav.nav-transparent {
+  position: absolute;
   background: transparent;
   color: #fff;
   text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+.main-nav.nav-solid {
+  background: rgba(250, 248, 243, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--color-charcoal);
+  border-bottom: 1.5px solid var(--color-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 .main-nav.has-announcement { top: auto; }
 .nav-logo {
@@ -428,11 +438,39 @@ button { cursor: pointer; font-family: var(--font-ui); border: none; background:
   transition: background 0.3s;
 }
 .category-tile:hover .category-tile-overlay { background: rgba(0,0,0,0.45); }
+.category-tile.is-coming-soon {
+  cursor: default;
+}
+.category-tile.is-coming-soon img {
+  filter: grayscale(35%) blur(1px);
+}
+.category-tile.is-coming-soon:hover img {
+  transform: none;
+}
+.category-tile.is-coming-soon .category-tile-overlay {
+  background: rgba(15, 26, 17, 0.65);
+}
+.category-tile.is-coming-soon:hover .category-tile-overlay {
+  background: rgba(15, 26, 17, 0.75);
+}
 .category-tile-name {
   font-family: var(--font-display);
   font-size: 2rem;
   color: #fff;
   font-weight: 400;
+}
+.badge-coming-soon {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold-light);
+  background: rgba(201, 168, 76, 0.15);
+  border: 1.5px solid var(--color-gold-light);
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* --- Product Card --- */
@@ -549,6 +587,46 @@ button { cursor: pointer; font-family: var(--font-ui); border: none; background:
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+.product-card.is-coming-soon {
+  cursor: default;
+  pointer-events: none;
+}
+.product-card.is-coming-soon .product-card-image img {
+  filter: grayscale(35%) blur(1px);
+}
+.product-card.is-coming-soon:hover img {
+  transform: none;
+}
+.product-card.is-coming-soon .product-card-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 26, 17, 0.65);
+  z-index: 1;
+}
+.product-card.is-coming-soon .product-card-image::after {
+  content: 'Coming Soon';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(201, 168, 76, 0.15);
+  border: 1.5px solid var(--color-gold-light);
+  color: var(--color-gold-light);
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  white-space: nowrap;
+}
+.stock-coming-soon {
+  color: var(--color-gold);
 }
 
 /* --- Offer Banner --- */
