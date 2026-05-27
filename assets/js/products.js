@@ -106,6 +106,24 @@ const Products = (() => {
   function renderProductGrid(products, containerSelector) {
     const container = document.querySelector(containerSelector);
     if (!container) return;
+    if (products.length === 0) {
+      container.innerHTML = `
+        <div class="col-span-full py-12 px-6 flex flex-col items-center justify-center text-center rounded-xl border border-[#C8DCC9]/40 shadow-sm transition-all duration-300 hover:shadow-md max-w-2xl mx-auto my-6" style="background-color: rgba(122, 158, 126, 0.08);">
+          <div class="w-16 h-16 rounded-full bg-cream flex items-center justify-center mb-4 border border-[#C8DCC9]/30">
+            <i data-lucide="sparkles" style="width:28px;height:28px;color:var(--color-mid-green)"></i>
+          </div>
+          <h3 class="font-display text-2xl font-semibold text-charcoal mb-3">Our collection is being lovingly curated</h3>
+          <p class="text-stone text-sm max-w-md mb-6 leading-relaxed">
+            We are handpicking the finest threads and patterns to bring you something truly magical. Follow us on Instagram for first looks, BTS, and exclusive launch offers!
+          </p>
+          <a href="https://www.instagram.com/dhalamcouture/" target="_blank" rel="noopener noreferrer" class="btn-pill btn-deep-rose inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold tracking-wide shadow-sm hover:shadow-md transition-all duration-300">
+            <i data-lucide="instagram" style="width:16px;height:16px"></i> Follow @dhalamcouture
+          </a>
+        </div>
+      `;
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+      return;
+    }
     const html = products.map(p => renderProductCard(p)).join('');
     container.innerHTML = html;
     // Handle broken images with placeholders
