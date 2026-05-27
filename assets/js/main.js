@@ -83,8 +83,9 @@ const App = (() => {
     const fab = document.getElementById('floating-wa');
     if (!fab) return;
     setTimeout(() => fab.classList.add('visible'), 3000);
-    fab.addEventListener('click', () => {
-      const url = typeof WhatsApp !== 'undefined' ? WhatsApp.buildGeneralURL() : 'https://wa.me/919876543210';
+    fab.addEventListener('click', (e) => {
+      e.preventDefault();
+      const url = typeof WhatsApp !== 'undefined' ? WhatsApp.buildGeneralURL() : 'https://wa.me/919526352500?text=Hi%20Dhalam%20Couture!%20I%20found%20you%20on%20Instagram.';
       window.open(url, '_blank');
     });
   }
