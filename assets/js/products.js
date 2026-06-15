@@ -70,21 +70,28 @@ const Products = (() => {
     const bgClass = placeholderBgs[Math.floor(Math.random() * placeholderBgs.length)];
 
     const waURL = typeof WhatsApp !== 'undefined' ? WhatsApp.buildInquiryURL(product) : '#';
+    const productLink = isSaree ? 'javascript:void(0)' : `product.html?id=${product.id}`;
 
     return `
     <article class="product-card ${isOut ? 'out-of-stock' : ''} ${isSaree ? 'is-coming-soon' : ''}" data-product-id="${product.id}">
-      <a href="${isSaree ? 'javascript:void(0)' : `product.html?id=${product.id}`}" class="product-card-link" aria-label="View ${product.name}">
+      <div class="product-card-content flex flex-col h-full">
         <div class="product-card-image">
-          ${badges.join('')}
-          <img src="${imgSrc}" alt="${product.name}" width="400" height="533" loading="lazy" decoding="async"
-               data-placeholder-bg="${bgClass}" data-placeholder-name="${product.name}" />
-          ${(!isOut && !isSaree) ? `<a href="${waURL}" target="_blank" rel="noopener" class="product-card-wa" aria-label="Order ${product.name} on WhatsApp" onclick="event.stopPropagation()">
+          <a href="${productLink}" class="product-card-image-link block" aria-label="View ${product.name}">
+            ${badges.join('')}
+            <img src="${imgSrc}" alt="${product.name}" width="400" height="533" loading="lazy" decoding="async"
+                 data-placeholder-bg="${bgClass}" data-placeholder-name="${product.name}" />
+          </a>
+          ${(!isOut && !isSaree) ? `<a href="${waURL}" target="_blank" rel="noopener" class="product-card-wa" aria-label="Order ${product.name} on WhatsApp">
             <i data-lucide="message-circle" style="width:20px;height:20px"></i>
           </a>` : ''}
         </div>
         <div class="product-card-info">
           <div class="product-card-category">${product.subcategory || product.category}</div>
-          <h3 class="product-card-name">${product.name}</h3>
+          <h3 class="product-card-name">
+            <a href="${productLink}" class="hover:text-deep-rose transition-colors">
+              ${product.name}
+            </a>
+          </h3>
           <div class="product-card-price">
             ${product.currency}${product.price.toLocaleString('en-IN')}
             ${hasDiscount ? `<span class="original-price">${product.currency}${product.originalPrice.toLocaleString('en-IN')}</span>` : ''}
@@ -99,7 +106,7 @@ const Products = (() => {
           </div>
           `}
         </div>
-      </a>
+      </div>
     </article>`;
   }
 

@@ -216,9 +216,9 @@
     let quantity = 1;
 
     const html = `
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12" style="grid-template-columns: 1fr 1fr;">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
       <!-- LEFT: Gallery -->
-      <div class="lg:col-span-1" style="grid-column: 1;">
+      <div class="lg:col-span-1">
         <div class="product-gallery-main relative group" id="main-image-container">
           <img src="${product.images[0]}" alt="${product.name}" width="600" height="800" loading="eager"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
@@ -248,7 +248,7 @@
       </div>
 
       <!-- RIGHT: Info -->
-      <div class="lg:col-span-1" style="grid-column: 2;">
+      <div class="lg:col-span-1">
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <a href="index.html">Home</a><span>›</span>
           <a href="collections.html?category=${product.category}">${catName}</a><span>›</span>
