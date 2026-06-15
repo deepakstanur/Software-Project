@@ -1,6 +1,6 @@
 async function initReelsSection() {
   try {
-    const response = await fetch('data/reels.json');
+    const response = await fetch('data/reels.json', { cache: 'no-store' });
     if (!response.ok) return;
     const { reels } = await response.json();
     

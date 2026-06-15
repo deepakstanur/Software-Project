@@ -8,19 +8,24 @@
       "image": "assets/images/categories/kurtis-category.webp",
       "subcategories": [
         {
-          "id": "anarkali",
-          "name": "Anarkali",
-          "slug": "anarkali"
+          "id": "Cord Set",
+          "name": "Cord Set",
+          "slug": "Cord Set"
         },
         {
-          "id": "straight",
-          "name": "Straight",
-          "slug": "straight"
+          "id": "Short Kurta",
+          "name": "Short Kurta",
+          "slug": "Short Kurta"
         },
         {
-          "id": "a-line",
-          "name": "A-Line",
-          "slug": "a-line"
+          "id": "Long Kurta",
+          "name": "Long Kurta",
+          "slug": "Long Kurta"
+        },
+        {
+          "id": "Peplum Short Top",
+          "name": "Peplum Short Top",
+          "slug": "Peplum Short Top"
         }
       ]
     },

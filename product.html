@@ -36,25 +36,54 @@
   </div>
 
   <!-- Navigation -->
-  <nav class="main-nav nav-solid flex items-center justify-between" aria-label="Main navigation">
-    <button id="mobile-menu-toggle" class="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Open menu"><i data-lucide="menu" style="width:24px;height:24px"></i></button>
-    <a href="index.html" class="nav-logo">Dhalam Couture</a>
-    <div class="hidden lg:flex items-center gap-8 font-ui text-sm tracking-wide">
-      <a href="index.html">Home</a>
-      <a href="collections.html">Collections</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
+  <header id="main-nav" class="main-nav nav-solid flex items-center justify-between" aria-label="Main navigation">
+    <!-- Left: Mobile Menu Toggle / Desktop Links -->
+    <div class="flex-1 flex justify-start items-center">
+      <button id="mobile-menu-toggle" class="lg:hidden min-w-[44px] min-h-[44px] flex items-center" aria-label="Open menu">
+        <i data-lucide="menu" style="width:24px;height:24px"></i>
+      </button>
+      <div class="hidden lg:flex items-center gap-8 font-ui text-sm tracking-wide">
+        <a href="index.html" class="hover:opacity-70 transition-opacity">Home</a>
+        <a href="collections.html" class="hover:opacity-70 transition-opacity">Collections</a>
+        <a href="size-guide.html" class="hover:opacity-70 transition-opacity">Size Guide</a>
+        <a href="about.html" class="hover:opacity-70 transition-opacity">About Us</a>
+        <a href="contact.html" class="hover:opacity-70 transition-opacity">Contact</a>
+      </div>
     </div>
-    <div class="flex items-center gap-3">
-      <a href="https://www.instagram.com/dhalamcouture/" target="_blank" rel="noopener" aria-label="Instagram" class="min-w-[44px] min-h-[44px] flex items-center justify-center"><i data-lucide="instagram" style="width:20px;height:20px"></i></a>
-      <a href="https://wa.me/919526352500?text=Hi%20Dhalam%20Couture!%20I%20found%20you%20on%20Instagram." data-wa-general class="hidden lg:inline-flex btn-pill btn-deep-rose text-sm"><i data-lucide="message-circle" style="width:16px;height:16px"></i> Order on WhatsApp</a>
+
+    <!-- Center: Logo + Name -->
+    <div class="flex-shrink-0 flex justify-center items-center">
+      <a href="index.html" class="nav-logo flex items-center gap-2 lg:gap-3">
+        <img src="assets/images/brand/logo.png" alt="Dhalam Couture Logo" style="height: 48px;" class="lg:!h-[64px] rounded-full" />
+        <span class="font-display text-[1.3rem] sm:text-2xl lg:text-3xl tracking-wide whitespace-nowrap">Dhalam Couture</span>
+      </a>
     </div>
-  </nav>
+
+    <!-- Right: Icons -->
+    <div class="flex-1 flex justify-end items-center gap-1 sm:gap-3">
+      <a href="https://www.instagram.com/dhalamcouture/" target="_blank" rel="noopener" aria-label="Instagram" class="min-w-[44px] min-h-[44px] flex items-center justify-center hover:opacity-70 transition-opacity">
+        <i data-lucide="instagram" style="width:20px;height:20px"></i>
+      </a>
+      <a href="https://wa.me/919526352500?text=Hi%20Dhalam%20Couture!%20I%20found%20you%20on%20Instagram." data-wa-general class="hidden lg:inline-flex btn-pill btn-deep-rose text-sm" aria-label="Order on WhatsApp">
+        <i data-lucide="message-circle" style="width:16px;height:16px"></i> Order on WhatsApp
+      </a>
+      <a href="https://wa.me/919526352500?text=Hi%20Dhalam%20Couture!%20I%20found%20you%20on%20Instagram." data-wa-general class="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center hover:opacity-70 transition-opacity" aria-label="WhatsApp">
+        <i data-lucide="message-circle" style="width:20px;height:20px"></i>
+      </a>
+    </div>
+  </header>
 
   <!-- Mobile Menu -->
   <div id="mobile-menu-overlay" class="mobile-menu-overlay">
-    <button id="mobile-menu-close" class="absolute top-6 right-6 min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Close menu"><i data-lucide="x" style="width:28px;height:28px"></i></button>
-    <a href="index.html">Home</a><a href="collections.html">Collections</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+    <button id="mobile-menu-close" class="absolute top-6 right-6 min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Close menu">
+      <i data-lucide="x" style="width:28px;height:28px"></i>
+    </button>
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="size-guide.html">Size Guide</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wa.me/919526352500?text=Hi%20Dhalam%20Couture!%20I%20found%20you%20on%20Instagram." data-wa-general class="btn-pill btn-whatsapp mt-4 text-base"><i data-lucide="message-circle" style="width:18px;height:18px"></i> Order on WhatsApp</a>
   </div>
 
   <main>
@@ -190,11 +219,21 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12" style="grid-template-columns: 1fr 1fr;">
       <!-- LEFT: Gallery -->
       <div class="lg:col-span-1" style="grid-column: 1;">
-        <div class="product-gallery-main" id="main-image-container">
+        <div class="product-gallery-main relative group" id="main-image-container">
           <img src="${product.images[0]}" alt="${product.name}" width="600" height="800" loading="eager"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
                style="width:100%;height:100%;object-fit:cover" />
           <div class="placeholder-img ${mainPlaceholder}" style="width:100%;height:100%;display:none">${product.name}</div>
+          
+          <!-- Navigation Arrows -->
+          ${product.images.length > 1 ? `
+            <button id="gallery-prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-charcoal flex items-center justify-center shadow-md transition-all lg:opacity-0 lg:group-hover:opacity-100 focus:opacity-100 z-10" aria-label="Previous image">
+              <i data-lucide="chevron-left" style="width:20px;height:20px"></i>
+            </button>
+            <button id="gallery-next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-charcoal flex items-center justify-center shadow-md transition-all lg:opacity-0 lg:group-hover:opacity-100 focus:opacity-100 z-10" aria-label="Next image">
+              <i data-lucide="chevron-right" style="width:20px;height:20px"></i>
+            </button>
+          ` : ''}
         </div>
         <div class="product-thumbs" id="thumb-strip">
           ${product.images.map((img, i) => `
@@ -334,21 +373,50 @@
       document.getElementById('size-section')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 
+    let currentImageIndex = 0;
+
+    function updateMainImage(index) {
+      currentImageIndex = (index + product.images.length) % product.images.length;
+      
+      // Update active thumbnail
+      document.querySelectorAll('.product-thumb').forEach((t, idx) => {
+        t.classList.toggle('active', idx === currentImageIndex);
+      });
+      
+      const src = product.images[currentImageIndex];
+      const mainContainer = document.getElementById('main-image-container');
+      const mainImg = mainContainer.querySelector('img');
+      if (mainImg && src) { 
+        mainImg.src = src; 
+        mainImg.style.display = 'block'; 
+      }
+    }
+
     // Thumbnail click - swap main image
-    document.querySelectorAll('.product-thumb').forEach(thumb => {
+    document.querySelectorAll('.product-thumb').forEach((thumb, index) => {
       thumb.addEventListener('click', () => {
-        document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
-        thumb.classList.add('active');
-        const src = thumb.dataset.src;
-        const mainContainer = document.getElementById('main-image-container');
-        const mainImg = mainContainer.querySelector('img');
-        if (mainImg && src) { mainImg.src = src; mainImg.style.display = 'block'; }
+        updateMainImage(index);
       });
     });
 
+    // Arrow click handlers
+    document.getElementById('gallery-prev-btn')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      updateMainImage(currentImageIndex - 1);
+    });
+
+    document.getElementById('gallery-next-btn')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      updateMainImage(currentImageIndex + 1);
+    });
+
     // Main image click → lightbox
-    document.getElementById('main-image-container')?.addEventListener('click', () => {
-      // With real images: App.openImageLightbox(currentImageSrc, product.name);
+    document.getElementById('main-image-container')?.addEventListener('click', (e) => {
+      if (e.target.closest('#gallery-prev-btn') || e.target.closest('#gallery-next-btn')) return;
+      const currentSrc = product.images[currentImageIndex];
+      if (currentSrc) {
+        App.openImageLightbox(currentSrc, product.name);
+      }
     });
 
     // Sticky bottom bar visibility

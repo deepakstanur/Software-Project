@@ -37,5 +37,6 @@
     "primaryColor": "#3D5C40",
     "accentColor": "#C9A84C",
     "backgroundColor": "#FAF8F3"
-  }
+  },
+  "reviewsApiUrl": ""
 }

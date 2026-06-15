@@ -5,11 +5,11 @@ const App = (() => {
 
   async function loadSettings() {
     try {
-      const res = await fetch('data/settings.json');
+      const res = await fetch('data/settings.json', { cache: 'no-store' });
       settings = await res.json();
     } catch {
       try {
-        const res = await fetch('./data/settings.json');
+        const res = await fetch('./data/settings.json', { cache: 'no-store' });
         settings = await res.json();
       } catch (e) {
         console.error('Could not load settings.json:', e);

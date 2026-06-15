@@ -7,14 +7,14 @@ const Products = (() => {
   async function fetchProducts() {
     if (productsCache) return productsCache;
     try {
-      const res = await fetch('data/products.json');
+      const res = await fetch('data/products.json', { cache: 'no-store' });
       const data = await res.json();
       productsCache = data.products;
       return productsCache;
     } catch (e) {
       console.warn('Products fetch failed, trying relative path...', e);
       try {
-        const res = await fetch('./data/products.json');
+        const res = await fetch('./data/products.json', { cache: 'no-store' });
         const data = await res.json();
         productsCache = data.products;
         return productsCache;
@@ -28,13 +28,13 @@ const Products = (() => {
   async function fetchCategories() {
     if (categoriesCache) return categoriesCache;
     try {
-      const res = await fetch('data/categories.json');
+      const res = await fetch('data/categories.json', { cache: 'no-store' });
       const data = await res.json();
       categoriesCache = data.categories;
       return categoriesCache;
     } catch {
       try {
-        const res = await fetch('./data/categories.json');
+        const res = await fetch('./data/categories.json', { cache: 'no-store' });
         const data = await res.json();
         categoriesCache = data.categories;
         return categoriesCache;
@@ -142,7 +142,7 @@ const Products = (() => {
     if (typeof lucide !== 'undefined') lucide.createIcons();
   }
 
-  async function renderFeaturedProducts(type, containerSelector, limit = 4) {
+  async function renderFeaturedProducts(type, containerSelector, limit = 12) {
     const products = await fetchProducts();
     let filtered;
     if (type === 'hotSelling') filtered = products.filter(p => p.hotSelling);

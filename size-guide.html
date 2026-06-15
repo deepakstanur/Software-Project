@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Size Guide | Dhalam Couture</title>
+  <meta name="description" content="Find your perfect fit with Dhalam Couture's size guide. Body measurement charts for kurtis, tops, and sarees in cm and inches." />
+  <link rel="icon" href="assets/images/brand/logo.png" type="image/png" sizes="32x32" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily: { display: ['Cormorant Garamond','serif'], ui: ['DM Sans','sans-serif'] },
+        colors: { cream:'#FAF7F2','warm-white':'#FFFFFF',blush:'#D4A5A5',mauve:'#B8869C','deep-rose':'#8B4565',charcoal:'#2C2C2C',stone:'#6B6B6B',border:'#E0DAD4','light-grey':'#E8E4DF' }
+      }}
+    }
+  </script>
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css" />
+
+  <style>
+    /* ── Page hero ── */
+    .sg-hero {
+      background: linear-gradient(160deg, #F5EEE8 0%, #EDE5DE 60%, #E8DDD4 100%);
+      padding: 6rem 1.5rem 3rem;
+      text-align: center;
+    }
+    .sg-hero .eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #8B4565;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .sg-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 400;
+      color: #2C2C2C;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .sg-hero p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: #6B6B6B;
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── Unit toggle ── */
+    .unit-toggle {
+      display: inline-flex;
+      background: #fff;
+      border: 1.5px solid #E8DDD4;
+      border-radius: 50px;
+      padding: 4px;
+      gap: 4px;
+      margin: 2rem auto 0;
+    }
+    .unit-toggle button {
+      padding: 0.45rem 1.5rem;
+      border-radius: 50px;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      background: transparent;
+      color: #6B6B6B;
+    }
+    .unit-toggle button.active {
+      background: #8B4565;
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(139,69,101,0.3);
+    }
+
+    /* ── Section wrapper ── */
+    .sg-section {
+      padding: 4rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .sg-section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 400;
+      color: #2C2C2C;
+      margin-bottom: 0.5rem;
+    }
+    .sg-section-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: #9E9E9E;
+      margin-bottom: 2rem;
+    }
+
+    /* ── How to measure cards ── */
+    .measure-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .measure-card {
+      background: #fff;
+      border: 1px solid #F0EAE3;
+      border-radius: 14px;
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .measure-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    .measure-icon {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, #F5EEE8, #EDE5DE);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.4rem;
+    }
+    .measure-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #2C2C2C;
+      margin-bottom: 0.5rem;
+    }
+    .measure-card p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      color: #6B6B6B;
+      line-height: 1.6;
+    }
+
+    /* ── Size Table ── */
+    .size-table-wrap {
+      overflow-x: auto;
+      border-radius: 14px;
+      border: 1px solid #F0EAE3;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    }
+    .size-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+    }
+    .size-table thead {
+      background: linear-gradient(135deg, #8B4565, #B8869C);
+    }
+    .size-table thead th {
+      color: #fff;
+      padding: 1rem 1.25rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+    .size-table thead th:first-child {
+      text-align: left;
+      border-radius: 12px 0 0 0;
+    }
+    .size-table thead th:last-child {
+      border-radius: 0 12px 0 0;
+    }
+    .size-table tbody tr {
+      border-bottom: 1px solid #F5EEE8;
+      transition: background 0.15s ease;
+    }
+    .size-table tbody tr:hover {
+      background: #FAF7F2;
+    }
+    .size-table tbody tr:last-child {
+      border-bottom: none;
+    }
+    .size-table tbody td {
+      padding: 0.9rem 1.25rem;
+      text-align: center;
+      color: #4A4A4A;
+    }
+    .size-table tbody td:first-child {
+      text-align: left;
+      font-weight: 700;
+      color: #8B4565;
+      font-size: 0.95rem;
+    }
+
+    /* highlight row on hover */
+    .size-badge {
+      display: inline-block;
+      padding: 0.2rem 0.75rem;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #F5EEE8, #EDE5DE);
+      color: #8B4565;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    /* ── Fit Tips ── */
+    .tip-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .tip-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      color: #4A4A4A;
+      line-height: 1.6;
+    }
+    .tip-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, #8B4565, #B8869C);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.75rem;
+      margin-top: 1px;
+    }
+
+    /* ── Info box ── */
+    .info-box {
+      background: linear-gradient(135deg, #FAF7F2, #F5EEE8);
+      border: 1px solid #E8DDD4;
+      border-left: 4px solid #8B4565;
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 1.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: #4A4A4A;
+      line-height: 1.7;
+    }
+    .info-box strong {
+      color: #8B4565;
+    }
+
+    /* ── divider ── */
+    .sg-divider {
+      border: none;
+      border-top: 1px solid #F0EAE3;
+      margin: 0;
+    }
+
+    /* ── Contact strip ── */
+    .sg-contact {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      background: linear-gradient(135deg, #2C2C2C, #3D2B2B);
+      color: #fff;
+    }
+    .sg-contact p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 1.25rem;
+    }
+    .sg-contact h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+    .wa-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #25D366;
+      color: #fff;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.3);
+    }
+    .wa-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+    }
+
+    /* hidden unit rows */
+    .unit-in { display: none; }
+    .unit-cm { display: table-row; }
+  </style>
+</head>
+
+<body class="bg-cream text-charcoal font-ui">
+
+  <!-- Navigation -->
+  <header id="main-nav" class="main-nav nav-solid flex items-center justify-between" aria-label="Main navigation">
+    <div class="flex-1 flex justify-start items-center">
+      <button id="mobile-menu-toggle" class="lg:hidden min-w-[44px] min-h-[44px] flex items-center" aria-label="Open menu">
+        <i data-lucide="menu" style="width:24px;height:24px"></i>
+      </button>
+      <div class="hidden lg:flex items-center gap-8 font-ui text-sm tracking-wide">
+        <a href="index.html" class="hover:opacity-70 transition-opacity">Home</a>
+        <a href="collections.html" class="hover:opacity-70 transition-opacity">Collections</a>
+        <a href="size-guide.html" class="hover:opacity-70 transition-opacity font-semibold">Size Guide</a>
+        <a href="about.html" class="hover:opacity-70 transition-opacity">About Us</a>
+        <a href="contact.html" class="hover:opacity-70 transition-opacity">Contact</a>
+      </div>
+    </div>
+    <div class="flex-shrink-0 flex justify-center items-center">
+      <a href="index.html" class="nav-logo flex items-center gap-2 lg:gap-3">
+        <img src="assets/images/brand/logo.png" alt="Dhalam Couture Logo" style="height: 48px;" class="lg:!h-[64px] rounded-full" />
+        <span class="font-display text-[1.3rem] sm:text-2xl lg:text-3xl tracking-wide whitespace-nowrap">Dhalam Couture</span>
+      </a>
+    </div>
+    <div class="flex-1 flex justify-end items-center gap-1 sm:gap-3">
+      <a href="https://www.instagram.com/dhalamcouture/" target="_blank" rel="noopener" aria-label="Instagram" class="min-w-[44px] min-h-[44px] flex items-center justify-center hover:opacity-70 transition-opacity">
+        <i data-lucide="instagram" style="width:20px;height:20px"></i>
+      </a>
+      <a href="https://wa.me/919526352500?text=Hi%20Dhalam%20Couture!%20I%20have%20a%20sizing%20question." class="hidden lg:inline-flex btn-pill btn-deep-rose text-sm" aria-label="Order on WhatsApp">
+        <i data-lucide="message-circle" style="width:16px;height:16px"></i> Order on WhatsApp
+      </a>
+      <a href="https://wa.me/919526352500?text=Hi%20Dhalam%20Couture!%20I%20have%20a%20sizing%20question." class="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center hover:opacity-70 transition-opacity" aria-label="WhatsApp">
+        <i data-lucide="message-circle" style="width:20px;height:20px"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu-overlay" class="mobile-menu-overlay">
+    <button id="mobile-menu-close" class="absolute top-6 right-6 min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Close menu">
+      <i data-lucide="x" style="width:28px;height:28px"></i>
+    </button>
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="size-guide.html" style="font-weight:600">Size Guide</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wa.me/919526352500?text=Hi%20Dhalam%20Couture!" class="btn-pill btn-whatsapp mt-4 text-base"><i data-lucide="message-circle" style="width:18px;height:18px"></i> Order on WhatsApp</a>
+  </div>
+
+  <main>
+    <!-- ── Hero ── -->
+    <section class="sg-hero">
+      <p class="eyebrow">Dhalam Couture</p>
+      <h1>Find Your Perfect Fit</h1>
+      <p>All measurements below are <strong>body measurements</strong>, not garment measurements. Use a soft measuring tape for accurate results.</p>
+
+      <!-- Unit Toggle -->
+      <div class="unit-toggle" role="group" aria-label="Unit toggle" style="margin-top:2rem">
+        <button id="btn-cm" class="active" onclick="setUnit('cm')">Centimetres (cm)</button>
+        <button id="btn-in" onclick="setUnit('in')">Inches (in)</button>
+      </div>
+    </section>
+
+    <!-- ── How to Measure ── -->
+    <section class="sg-section">
+      <p class="eyebrow" style="font-family:'DM Sans',sans-serif;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.18em;color:#8B4565;font-weight:600;margin-bottom:0.5rem">Step 1</p>
+      <h2 class="sg-section-title">How to Measure Yourself</h2>
+      <p class="sg-section-sub">Stand naturally and keep the tape snug but not tight. Measure over light inner-wear for best results.</p>
+
+      <div class="measure-grid">
+        <div class="measure-card">
+          <div class="measure-icon">📏</div>
+          <h3>Bust / Chest</h3>
+          <p>Measure around the fullest part of your chest, keeping the tape parallel to the floor.</p>
+        </div>
+        <div class="measure-card">
+          <div class="measure-icon">✂️</div>
+          <h3>Waist</h3>
+          <p>Measure around the narrowest part of your natural waist, usually just above your belly button.</p>
+        </div>
+        <div class="measure-card">
+          <div class="measure-icon">🧵</div>
+          <h3>Hips</h3>
+          <p>Stand with feet together and measure around the fullest part of your hips and seat.</p>
+        </div>
+        <div class="measure-card">
+          <div class="measure-icon">📐</div>
+          <h3>Height</h3>
+          <p>Stand straight against a wall, heels together. Measure from top of head to floor.</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        💡 <strong>Pro tip:</strong> If you are between two sizes, we recommend sizing <strong>up</strong> for a relaxed, comfortable fit. All our garments carry approximately 1 inch of ease margin.
+      </div>
+    </section>
+
+    <hr class="sg-divider" />
+
+    <!-- ── Kurtis & Tops Size Chart ── -->
+    <section class="sg-section">
+      <p class="eyebrow" style="font-family:'DM Sans',sans-serif;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.18em;color:#8B4565;font-weight:600;margin-bottom:0.5rem">Step 2</p>
+      <h2 class="sg-section-title">Kurtis, Kurtas & Tops</h2>
+      <p class="sg-section-sub">Applies to all Kurtis, Short Kurtas, Long Kurtas, Cord Sets, and Peplum Tops</p>
+
+      <!-- CM Table -->
+      <div class="size-table-wrap">
+        <table class="size-table" id="table-kurta">
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th id="bust-label">Bust (cm)</th>
+              <th id="waist-label">Waist (cm)</th>
+              <th id="hips-label">Hips (cm)</th>
+              <th id="height-label">Height (cm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- CM rows -->
+            <tr class="unit-cm">
+              <td><span class="size-badge">S</span></td>
+              <td>80 – 84</td><td>64 – 68</td><td>88 – 92</td><td>155 – 160</td>
+            </tr>
+            <tr class="unit-cm">
+              <td><span class="size-badge">M</span></td>
+              <td>84 – 88</td><td>68 – 72</td><td>92 – 96</td><td>160 – 165</td>
+            </tr>
+            <tr class="unit-cm">
+              <td><span class="size-badge">L</span></td>
+              <td>88 – 92</td><td>72 – 76</td><td>96 – 100</td><td>163 – 168</td>
+            </tr>
+            <tr class="unit-cm">
+              <td><span class="size-badge">XL</span></td>
+              <td>92 – 96</td><td>76 – 80</td><td>100 – 104</td><td>165 – 170</td>
+            </tr>
+            <tr class="unit-cm">
+              <td><span class="size-badge">XXL</span></td>
+              <td>96 – 100</td><td>80 – 84</td><td>104 – 108</td><td>165 – 172</td>
+            </tr>
+            <!-- Inch rows -->
+            <tr class="unit-in">
+              <td><span class="size-badge">S</span></td>
+              <td>31 – 33</td><td>25 – 27</td><td>34 – 36</td><td>61 – 63</td>
+            </tr>
+            <tr class="unit-in">
+              <td><span class="size-badge">M</span></td>
+              <td>33 – 35</td><td>27 – 28</td><td>36 – 38</td><td>63 – 65</td>
+            </tr>
+            <tr class="unit-in">
+              <td><span class="size-badge">L</span></td>
+              <td>35 – 36</td><td>28 – 30</td><td>38 – 39</td><td>64 – 66</td>
+            </tr>
+            <tr class="unit-in">
+              <td><span class="size-badge">XL</span></td>
+              <td>36 – 38</td><td>30 – 31</td><td>39 – 41</td><td>65 – 67</td>
+            </tr>
+            <tr class="unit-in">
+              <td><span class="size-badge">XXL</span></td>
+              <td>38 – 39</td><td>31 – 33</td><td>41 – 43</td><td>65 – 68</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="info-box" style="margin-top:1rem">
+        🪡 <strong>Cord Sets:</strong> The top and bottom are sized the same — order one size for a matching set. If your bust and hip measurements fall in different sizes, go with the larger size.
+      </div>
+    </section>
+
+    <hr class="sg-divider" />
+
+    <!-- ── Sarees ── -->
+    <section class="sg-section">
+      <h2 class="sg-section-title">Sarees</h2>
+      <p class="sg-section-sub">All sarees come in Free Size. Standard saree length is 5.5 metres + 0.8 metre blouse piece.</p>
+
+      <div class="size-table-wrap">
+        <table class="size-table">
+          <thead>
+            <tr>
+              <th style="text-align:left">Type</th>
+              <th>Length</th>
+              <th>Blouse Piece</th>
+              <th>Fits Up To</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:left;font-weight:600;color:#8B4565">All Sarees</td>
+              <td>5.5 m</td>
+              <td>0.8 m</td>
+              <td>Bust up to 44"</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="info-box">
+        🥻 <strong>Blouse note:</strong> The included blouse piece is unstitched. Please take it to your local tailor for stitching. Recommended blouse measurement — record your <em>exact</em> bust size plus 1 inch ease when visiting the tailor.
+      </div>
+    </section>
+
+    <hr class="sg-divider" />
+
+    <!-- ── Fit Tips ── -->
+    <section class="sg-section">
+      <h2 class="sg-section-title">Fit Tips</h2>
+      <p class="sg-section-sub">A few things to keep in mind before you order</p>
+
+      <ul class="tip-list">
+        <li>
+          <span class="tip-icon">✓</span>
+          <span><strong>Size up at the border.</strong> If your measurements fall between two sizes, always choose the larger size for a comfortable, breathable fit.</span>
+        </li>
+        <li>
+          <span class="tip-icon">✓</span>
+          <span><strong>1 inch ease is built in.</strong> All garments include approximately 1 inch of ease on top of the stated body measurement — so the garment is never skintight.</span>
+        </li>
+        <li>
+          <span class="tip-icon">✓</span>
+          <span><strong>Prioritise bust for tops.</strong> For kurtis and tops, match your bust measurement first. The waist and hem can always be slightly adjusted by a tailor.</span>
+        </li>
+        <li>
+          <span class="tip-icon">✓</span>
+          <span><strong>Cotton garments may shrink slightly.</strong> We recommend washing in cold water on a gentle cycle to preserve the fabric and colour.</span>
+        </li>
+        <li>
+          <span class="tip-icon">✓</span>
+          <span><strong>Hand-block prints vary slightly.</strong> Because our prints are hand-made by artisans, minor motif placement variations are a mark of authenticity, not a defect.</span>
+        </li>
+      </ul>
+    </section>
+
+    <hr class="sg-divider" />
+
+    <!-- ── Care Guide quick ref ── -->
+    <section class="sg-section">
+      <h2 class="sg-section-title">Care Quick Reference</h2>
+      <p class="sg-section-sub">Keep your Dhalam pieces looking fresh and beautiful</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem">
+        <div class="measure-card">
+          <div class="measure-icon">🧼</div>
+          <h3>Hand Wash</h3>
+          <p>Wash in cold water with a mild detergent. Avoid scrubbing.</p>
+        </div>
+        <div class="measure-card">
+          <div class="measure-icon">🎨</div>
+          <h3>Colour Care</h3>
+          <p>Wash dark colours separately for the first 2–3 washes to prevent bleeding.</p>
+        </div>
+        <div class="measure-card">
+          <div class="measure-icon">☀️</div>
+          <h3>Dry in Shade</h3>
+          <p>Avoid direct sunlight. Dry flat or hang in shade to retain shape and colour.</p>
+        </div>
+        <div class="measure-card">
+          <div class="measure-icon">🔥</div>
+          <h3>Iron on Low</h3>
+          <p>Use medium heat. For block-printed fabrics, iron on reverse side.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Still unsure? ── -->
+    <div class="sg-contact">
+      <h2>Still unsure about your size?</h2>
+      <p>Drop us a message on WhatsApp with your measurements and we will personally help you choose the right fit.</p>
+      <a href="https://wa.me/919526352500?text=Hi%20Dhalam%20Couture!%20I%20need%20help%20finding%20my%20size.%20My%20measurements%20are%3A" class="wa-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.528 5.844L.057 23.5l5.763-1.511A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 01-5.012-1.374l-.36-.213-3.42.897.913-3.33-.235-.384A9.76 9.76 0 012.182 12C2.182 6.582 6.582 2.182 12 2.182c5.418 0 9.818 4.4 9.818 9.818 0 5.418-4.4 9.818-9.818 9.818z"/></svg>
+        Chat with Us on WhatsApp
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer section-padding" aria-label="Footer">
+    <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mb-10 text-left">
+      <div>
+        <a href="index.html" class="flex items-center gap-2 mb-3">
+          <img src="assets/images/brand/logo.png" alt="Dhalam Couture" style="height:40px" class="rounded-full" />
+          <span class="font-display text-xl text-white">Dhalam Couture</span>
+        </a>
+        <p class="text-sm leading-relaxed opacity-80 max-w-[260px]">Handcrafted Indian ethnic wear — rooted in tradition, worn with grace.</p>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h3>
+        <ul class="space-y-2 text-sm opacity-80">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collections.html">Collections</a></li>
+          <li><a href="size-guide.html">Size Guide</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Follow Us</h3>
+        <div class="flex items-center gap-4">
+          <a href="https://www.instagram.com/dhalamcouture/" target="_blank" rel="noopener" aria-label="Instagram" class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
+            <i data-lucide="instagram" style="width:20px;height:20px"></i> <span class="text-sm">@dhalamcouture</span>
+          </a>
+        </div>
+        <div class="flex items-center gap-4 mt-3">
+          <a href="https://wa.me/919526352500?text=Hi%20Dhalam%20Couture!%20I%20found%20you%20on%20Instagram." data-wa-general aria-label="WhatsApp" class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
+            <i data-lucide="message-circle" style="width:20px;height:20px"></i> <span class="text-sm">WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-6 text-center text-xs opacity-60">
+      © 2025 Dhalam Couture. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a id="floating-wa" class="floating-wa flex items-center justify-center" href="https://wa.me/919526352500" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i data-lucide="message-circle" style="width:26px;height:26px"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script>
+    // Unit toggle
+    function setUnit(unit) {
+      const cmRows = document.querySelectorAll('.unit-cm');
+      const inRows = document.querySelectorAll('.unit-in');
+      const btnCm = document.getElementById('btn-cm');
+      const btnIn = document.getElementById('btn-in');
+
+      // Update column headers
+      const labels = {
+        bust: document.getElementById('bust-label'),
+        waist: document.getElementById('waist-label'),
+        hips: document.getElementById('hips-label'),
+        height: document.getElementById('height-label'),
+      };
+
+      if (unit === 'cm') {
+        cmRows.forEach(r => r.style.display = 'table-row');
+        inRows.forEach(r => r.style.display = 'none');
+        btnCm.classList.add('active');
+        btnIn.classList.remove('active');
+        if (labels.bust) labels.bust.textContent = 'Bust (cm)';
+        if (labels.waist) labels.waist.textContent = 'Waist (cm)';
+        if (labels.hips) labels.hips.textContent = 'Hips (cm)';
+        if (labels.height) labels.height.textContent = 'Height (cm)';
+      } else {
+        inRows.forEach(r => r.style.display = 'table-row');
+        cmRows.forEach(r => r.style.display = 'none');
+        btnIn.classList.add('active');
+        btnCm.classList.remove('active');
+        if (labels.bust) labels.bust.textContent = 'Bust (in)';
+        if (labels.waist) labels.waist.textContent = 'Waist (in)';
+        if (labels.hips) labels.hips.textContent = 'Hips (in)';
+        if (labels.height) labels.height.textContent = 'Height (in)';
+      }
+    }
+
+    // Init — hide inch rows on load
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.unit-in').forEach(r => r.style.display = 'none');
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+
+    window.addEventListener('load', () => {
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

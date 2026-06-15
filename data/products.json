@@ -2,88 +2,257 @@
   "products": [
     {
       "id": "krt-001",
-      "name": "Ivory Block Print Anarkali Kurti",
-      "slug": "ivory-block-print-anarkali-kurti",
+      "name": "White Floral Cotton Cord Set",
+      "slug": "White Floral Cotton Cord Set",
       "category": "kurtis",
-      "subcategory": "anarkali",
-      "price": 1299,
+      "subcategory": "Cord Set",
+      "price": 1499,
       "originalPrice": 1799,
       "currency": "₹",
       "fabric": "Cotton",
-      "occasion": ["Festive", "Casual", "Daily Wear"],
-      "description": "A stunning ivory anarkali kurti adorned with intricate block prints inspired by Rajasthani heritage. The flowing silhouette flatters every body type, while the breathable cotton fabric keeps you comfortable all day long.",
+      "occasion": [
+        "Festive",
+        "Casual",
+        "Daily Wear"
+      ],
+      "description": "A charming ivory cotton cord set adorned with vibrant floral motifs inspired by traditional Indian artistry. Thoughtfully crafted in soft, breathable cotton, the sleeveless kurta paired with comfortable straight pants offers effortless elegance and all-day comfort. Perfect for relaxed days, festive gatherings, and everything in between.",
       "careInstructions": "Hand wash separately in cold water. Do not bleach. Dry in shade. Iron on medium heat.",
       "sizes": [
-        { "size": "S", "available": true },
-        { "size": "M", "available": true },
-        { "size": "L", "available": true },
-        { "size": "XL", "available": true },
-        { "size": "XXL", "available": false }
+        {
+          "size": "S",
+          "available": true
+        },
+        {
+          "size": "M",
+          "available": true
+        },
+        {
+          "size": "L",
+          "available": true
+        },
+        {
+          "size": "XL",
+          "available": true
+        },
+        {
+          "size": "XXL",
+          "available": true
+        }
       ],
       "images": [
-        "assets/images/products/krt-001/krt-001-1.webp"
+        "assets/images/products/krt-001/pomelli_catalog-1.png",
+        "assets/images/products/krt-001/pomelli_catalog-2.png",
+        "assets/images/products/krt-001/pomelli_catalog-3.png",
+        "assets/images/products/krt-001/pomelli_catalog-4.png",
+        "assets/images/products/krt-001/pomelli_catalog-5.png"
       ],
       "stockStatus": "in_stock",
-      "stockCount": null,
+      "stockCount": 1,
       "hotSelling": true,
       "newArrival": true,
       "featured": false
     },
     {
       "id": "krt-002",
-      "name": "Rose Chanderi Straight Kurti",
-      "slug": "rose-chanderi-straight-kurti",
+      "name": "Hand block Printed Long Sleeveless Kurta",
+      "slug": "Hand block Printed Long Sleeveless Kurta",
       "category": "kurtis",
-      "subcategory": "straight",
+      "subcategory": "Short Kurta",
       "price": 999,
-      "originalPrice": null,
+      "originalPrice": 1299,
       "currency": "₹",
-      "fabric": "Chanderi Silk",
-      "occasion": ["Office Wear", "Casual", "Semi-Formal"],
-      "description": "Effortlessly elegant, this rose-toned straight kurti in luxurious Chanderi silk is your go-to for understated sophistication. The subtle sheen catches the light beautifully.",
+      "fabric": "Handloom Cotton",
+      "occasion": [
+        "Office Wear",
+        "Casual",
+        "Semi-Formal"
+      ],
+      "description": "Thoughtfully crafted in soft, breathable cotton, this hand block printed long sleeveless kurta features delicate floral buta motifs inspired by traditional Indian craftsmanship. The calming indigo hue and easy silhouette come together to create a piece that is both timeless and effortlessly elegant. Designed for all-day comfort, it's perfect for slow mornings, everyday wear, and moments that call for understated grace.",
       "careInstructions": "Dry clean recommended. Hand wash gently in cold water. Do not wring. Iron on low heat.",
       "sizes": [
-        { "size": "S", "available": true },
-        { "size": "M", "available": true },
-        { "size": "L", "available": true },
-        { "size": "XL", "available": true },
-        { "size": "XXL", "available": true }
+        {
+          "size": "S",
+          "available": true
+        },
+        {
+          "size": "M",
+          "available": true
+        },
+        {
+          "size": "L",
+          "available": true
+        },
+        {
+          "size": "XL",
+          "available": true
+        },
+        {
+          "size": "XXL",
+          "available": true
+        }
       ],
       "images": [
-        "assets/images/products/krt-002/krt-002-1.webp"
+        "assets/images/products/krt-002/pomelli_catalog-1.png",
+        "assets/images/products/krt-002/pomelli_catalog-2.png",
+        "assets/images/products/krt-002/pomelli_catalog-3.png",
+        "assets/images/products/krt-002/pomelli_catalog-4.png"
       ],
       "stockStatus": "in_stock",
-      "stockCount": null,
+      "stockCount": 2,
       "hotSelling": true,
-      "newArrival": false,
+      "newArrival": true,
       "featured": false
     },
     {
       "id": "krt-003",
-      "name": "Indigo Bandhani Kurti Set",
-      "slug": "indigo-bandhani-kurti-set",
+      "name": "Green Kalamkari Short Kurta",
+      "slug": "Green Kalamkari Short Kurta",
       "category": "kurtis",
-      "subcategory": "a-line",
-      "price": 2199,
-      "originalPrice": 2999,
+      "subcategory": "Short Kurta",
+      "price": 999,
+      "originalPrice": 1299,
       "currency": "₹",
       "fabric": "Cotton",
-      "occasion": ["Festive", "Wedding Guest", "Pooja"],
-      "description": "A mesmerizing indigo kurti set featuring authentic Bandhani tie-dye work from Gujarat artisans. Includes a flowing A-line kurti and matching dupatta with hand-tied patterns.",
+      "occasion": [
+        "Semi-Formal",
+        "Office Wear",
+        "Casual"
+      ],
+      "description": "Rooted in tradition and crafted for everyday elegance, this green Kalamkari short kurta celebrates the beauty of timeless Indian artistry. Adorned with intricate Kalamkari-inspired motifs and tailored in soft, breathable cotton, its relaxed silhouette offers effortless comfort and versatility. Perfect for workdays, casual outings, and moments that call for understated charm.",
       "careInstructions": "Hand wash separately in cold water. Colors may bleed initially. Dry in shade. Iron on medium heat.",
       "sizes": [
-        { "size": "S", "available": true },
-        { "size": "M", "available": true },
-        { "size": "L", "available": false },
-        { "size": "XL", "available": true },
-        { "size": "XXL", "available": false }
+        {
+          "size": "S",
+          "available": true
+        },
+        {
+          "size": "M",
+          "available": true
+        },
+        {
+          "size": "L",
+          "available": true
+        },
+        {
+          "size": "XL",
+          "available": true
+        },
+        {
+          "size": "XXL",
+          "available": false
+        }
       ],
       "images": [
-        "assets/images/products/krt-003/krt-003-1.webp"
+        "assets/images/products/krt-003/Green pomelli_photoshoot-1.png",
+        "assets/images/products/krt-003/Green pomelli_photoshoot-2.png",
+        "assets/images/products/krt-003/Green pomelli_photoshoot-3.png",
+        "assets/images/products/krt-003/Green pomelli_photoshoot-4.png"
       ],
-      "stockStatus": "low_stock",
+      "stockStatus": "in_stock",
       "stockCount": 2,
-      "hotSelling": false,
+      "hotSelling": true,
+      "newArrival": true,
+      "featured": true
+    },
+    {
+      "id": "krt-004",
+      "name": "Green Hakkoba Floral Long Kurta",
+      "slug": "Green Hakkoba Floral Long Kurta",
+      "category": "kurtis",
+      "subcategory": "Long Kurta",
+      "price": 1399,
+      "originalPrice": 1699,
+      "currency": "₹",
+      "fabric": "Cotton",
+      "occasion": [
+        "Festive",
+        "Casual",
+        "Daily Wear"
+      ],
+      "description": "Delicately crafted in soft, breathable cotton, this Green Hakkoba Floral Long Kurta is a celebration of timeless elegance and feminine charm. Adorned with intricate floral embroidery inspired by traditional Hakkoba craftsmanship, its graceful silhouette offers effortless comfort and sophistication. Designed for everyday ease and special moments alike, this versatile piece blends heritage artistry with understated beauty.",
+      "careInstructions": "Hand wash separately in cold water. Colors may bleed initially. Dry in shade. Iron on medium heat.",
+      "sizes": [
+        {
+          "size": "S",
+          "available": true
+        },
+        {
+          "size": "M",
+          "available": true
+        },
+        {
+          "size": "L",
+          "available": true
+        },
+        {
+          "size": "XL",
+          "available": true
+        },
+        {
+          "size": "XXL",
+          "available": false
+        }
+      ],
+      "images": [
+        "assets/images/products/krt-004/Hakoba pomelli_photoshoot-1.png",
+        "assets/images/products/krt-004/Hakoba pomelli_photoshoot-2.png",
+        "assets/images/products/krt-004/Hakoba pomelli_photoshoot-3.png",
+        "assets/images/products/krt-004/Hakoba pomelli_photoshoot-4.png"
+      ],
+      "stockStatus": "in_stock",
+      "stockCount": 2,
+      "hotSelling": true,
+      "newArrival": true,
+      "featured": true
+    },
+    {
+      "id": "krt-005",
+      "name": "Floral Peplum Short Top",
+      "slug": "Floral Peplum Short Top",
+      "category": "kurtis",
+      "subcategory": "Peplum Short Top",
+      "price": 799,
+      "originalPrice": 999,
+      "currency": "₹",
+      "fabric": "Cotton",
+      "occasion": [
+        "Semi-Formal",
+        "Casual",
+        "College"
+      ],
+      "description": "Effortlessly feminine and thoughtfully crafted, this Floral Peplum Short Top brings together timeless charm and everyday comfort. Adorned with delicate floral prints and designed with a flattering peplum silhouette, it is tailored in soft, breathable cotton for ease and elegance. Perfect for relaxed days and versatile styling, this piece adds a touch of grace to every occasion.",
+      "careInstructions": "Hand wash separately in cold water. Colors may bleed initially. Dry in shade. Iron on medium heat.",
+      "sizes": [
+        {
+          "size": "S",
+          "available": true
+        },
+        {
+          "size": "M",
+          "available": true
+        },
+        {
+          "size": "L",
+          "available": true
+        },
+        {
+          "size": "XL",
+          "available": true
+        },
+        {
+          "size": "XXL",
+          "available": true
+        }
+      ],
+      "images": [
+        "assets/images/products/krt-005/Peplum pomelli_photoshoot-1.png",
+        "assets/images/products/krt-005/Peplum pomelli_photoshoot-2.png",
+        "assets/images/products/krt-005/Peplum pomelli_photoshoot-3.png",
+        "assets/images/products/krt-005/Peplum pomelli_photoshoot-4.png"
+      ],
+      "stockStatus": "in_stock",
+      "stockCount": 2,
+      "hotSelling": true,
       "newArrival": true,
       "featured": true
     },
@@ -97,10 +266,19 @@
       "originalPrice": 6499,
       "currency": "₹",
       "fabric": "Pure Silk",
-      "occasion": ["Wedding", "Reception", "Festive"],
+      "occasion": [
+        "Wedding",
+        "Reception",
+        "Festive"
+      ],
       "description": "A breathtaking Kanjivaram silk saree in romantic dusty rose, handwoven by master weavers of Kanchipuram. Rich zari border with traditional temple motifs in gold.",
       "careInstructions": "Dry clean only. Store in muslin cloth. Avoid direct sunlight.",
-      "sizes": [{ "size": "Free Size", "available": true }],
+      "sizes": [
+        {
+          "size": "Free Size",
+          "available": true
+        }
+      ],
       "images": [
         "assets/images/products/sar-001/sar-001-1.webp"
       ],
@@ -120,10 +298,19 @@
       "originalPrice": null,
       "currency": "₹",
       "fabric": "Organza",
-      "occasion": ["Cocktail Party", "Reception", "Engagement"],
+      "occasion": [
+        "Cocktail Party",
+        "Reception",
+        "Engagement"
+      ],
       "description": "Float through celebrations in this ethereal ivory organza saree with delicate floral threadwork and sequin accents. Modern yet timeless elegance.",
       "careInstructions": "Dry clean only. Handle with care. Store on padded hanger or rolled in tissue paper.",
-      "sizes": [{ "size": "Free Size", "available": true }],
+      "sizes": [
+        {
+          "size": "Free Size",
+          "available": true
+        }
+      ],
       "images": [
         "assets/images/products/sar-002/sar-002-1.webp"
       ],
@@ -143,10 +330,19 @@
       "originalPrice": 2199,
       "currency": "₹",
       "fabric": "Handloom Cotton",
-      "occasion": ["Daily Wear", "Office Wear", "Casual"],
+      "occasion": [
+        "Daily Wear",
+        "Office Wear",
+        "Casual"
+      ],
       "description": "A timeless navy cotton handloom saree woven on traditional pit looms. Subtle golden zari stripes and contrasting border add understated luxury.",
       "careInstructions": "Machine wash gentle cycle or hand wash cold. Mild detergent. Dry in shade. Iron medium heat.",
-      "sizes": [{ "size": "Free Size", "available": false }],
+      "sizes": [
+        {
+          "size": "Free Size",
+          "available": false
+        }
+      ],
       "images": [
         "assets/images/products/sar-003/sar-003-1.webp"
       ],
