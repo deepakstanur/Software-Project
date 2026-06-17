@@ -84,7 +84,9 @@ const Products = (() => {
           ${(!isOut && !isSaree) ? `<a href="${waURL}" target="_blank" rel="noopener" class="product-card-wa" aria-label="Order ${product.name} on WhatsApp">
             <i data-lucide="message-circle" style="width:20px;height:20px"></i>
           </a>` : ''}
+          ${(!isOut && !isSaree) ? `<button class="quick-view-btn" data-product-id="${product.id}" aria-label="Quick view ${product.name}">Quick View</button>` : ''}
         </div>
+
         <div class="product-card-info">
           <div class="product-card-category">${product.subcategory || product.category}</div>
           <h3 class="product-card-name">

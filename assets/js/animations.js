@@ -1,92 +1,117 @@
-/* ===== Dhalam Couture — Animations Module ===== */
+/* ===== Dhalam Couture — Animations Module (Premium Upgrade) ===== */
+/* Replaces GSAP with vanilla Intersection Observer for scroll reveals */
 
 const Animations = (() => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function initHeroAnimation() {
-    if (prefersReducedMotion) return;
-    if (typeof gsap === 'undefined') return;
+  function initScrollReveal() {
+    if (prefersReducedMotion) {
+      // Immediately show all reveal elements
+      document.querySelectorAll('.reveal').forEach(el => {
+        el.classList.add('revealed');
+      });
+      return;
+    }
 
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-    tl.from('.hero-label', { opacity: 0, y: 20, duration: 0.8 })
-      .from('.hero-headline', { opacity: 0, y: 40, duration: 1 }, '-=0.5')
-      .from('.hero-sub', { opacity: 0, y: 20, duration: 0.8 }, '-=0.5')
-      .from('.hero-ctas > *', { opacity: 0, y: 20, duration: 0.6, stagger: 0.15 }, '-=0.4')
-      .from('.scroll-indicator', { opacity: 0, duration: 0.6 }, '-=0.2');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          // Apply stagger delay if data attribute is present
+          const delay = el.dataset.revealDelay;
+          if (delay) {
+            el.style.transitionDelay = delay + 'ms';
+          }
+          el.classList.add('revealed');
+          observer.unobserve(el); // Once revealed, never re-animate
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      observer.observe(el);
+    });
   }
 
-  function initScrollAnimations() {
-    if (prefersReducedMotion) return;
-    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-
-    gsap.registerPlugin(ScrollTrigger);
-
+  /* Dynamically add .reveal to key elements that aren't manually tagged */
+  function autoTagRevealElements() {
     // Section titles
-    gsap.utils.toArray('.section-title, .section-subtitle').forEach(el => {
-      gsap.from(el, {
-        scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
-        opacity: 0, y: 30, duration: 0.8, ease: 'power2.out'
-      });
+    document.querySelectorAll('.section-title, .section-subtitle, .section-eyebrow').forEach(el => {
+      if (!el.classList.contains('reveal') && !el.closest('.hero-section')) {
+        el.classList.add('reveal');
+      }
     });
 
-    // Product cards batch
-    ScrollTrigger.batch('.product-card', {
-      onEnter: (elements) => {
-        gsap.from(elements, { opacity: 0, y: 30, duration: 0.6, stagger: 0.1, ease: 'power2.out' });
-      },
-      start: 'top 88%'
+    // Product cards — stagger them
+    document.querySelectorAll('.product-card').forEach((card, i) => {
+      if (!card.classList.contains('reveal')) {
+        card.classList.add('reveal');
+        card.dataset.revealDelay = (i % 4) * 80; // stagger in groups of 4
+      }
     });
 
-    // Category tiles
-    gsap.utils.toArray('.category-tile').forEach((tile, i) => {
-      gsap.from(tile, {
-        scrollTrigger: { trigger: tile, start: 'top 85%' },
-        opacity: 0, y: 30, duration: 0.7, delay: i * 0.15, ease: 'power2.out'
-      });
+    // Category tiles — stagger
+    document.querySelectorAll('.category-tile').forEach((tile, i) => {
+      if (!tile.classList.contains('reveal')) {
+        tile.classList.add('reveal');
+        tile.dataset.revealDelay = i * 120;
+      }
     });
 
-    // Brand story
+    // Brand story elements
     const storyImg = document.querySelector('.brand-story-image');
     const storyText = document.querySelector('.brand-story-text');
-    if (storyImg) {
-      gsap.from(storyImg, {
-        scrollTrigger: { trigger: storyImg, start: 'top 80%' },
-        opacity: 0, x: -50, duration: 1, ease: 'power2.out'
-      });
+    if (storyImg && !storyImg.classList.contains('reveal')) storyImg.classList.add('reveal');
+    if (storyText && !storyText.classList.contains('reveal')) {
+      storyText.classList.add('reveal');
+      storyText.dataset.revealDelay = 150;
     }
-    if (storyText) {
-      gsap.from(storyText, {
-        scrollTrigger: { trigger: storyText, start: 'top 80%' },
-        opacity: 0, x: 50, duration: 1, ease: 'power2.out'
-      });
-    }
+
+    // Reel cards — stagger
+    document.querySelectorAll('.reels-card').forEach((card, i) => {
+      if (!card.classList.contains('reveal')) {
+        card.classList.add('reveal');
+        card.dataset.revealDelay = i * 80;
+      }
+    });
+
+    // Review cards — stagger
+    document.querySelectorAll('.review-card, .testimonial-card').forEach((card, i) => {
+      if (!card.classList.contains('reveal')) {
+        card.classList.add('reveal');
+        card.dataset.revealDelay = i * 100;
+      }
+    });
 
     // Offer / CTA banners
-    gsap.utils.toArray('.offer-banner, .wa-cta-banner').forEach(el => {
-      gsap.from(el, {
-        scrollTrigger: { trigger: el, start: 'top 85%' },
-        opacity: 0, y: 40, duration: 0.8, ease: 'power2.out'
-      });
+    document.querySelectorAll('.offer-banner, .wa-cta-banner').forEach(el => {
+      if (!el.classList.contains('reveal')) el.classList.add('reveal');
     });
 
-    // Reel cards
-    ScrollTrigger.batch('.reels-card', {
-      onEnter: (elements) => {
-        gsap.from(elements, { opacity: 0, scale: 0.92, duration: 0.5, stagger: 0.08, ease: 'power2.out' });
-      },
-      start: 'top 90%'
+    // Footer columns
+    document.querySelectorAll('.site-footer > div > div').forEach((col, i) => {
+      if (!col.classList.contains('reveal')) {
+        col.classList.add('reveal');
+        col.dataset.revealDelay = i * 100;
+      }
     });
-  }
 
-  function initHoverEffects() {
-    // Handled via CSS transitions for performance
+    // Trust strip items (collections page)
+    document.querySelectorAll('[aria-label="Customer trust strip"] .flex.flex-col').forEach((item, i) => {
+      if (!item.classList.contains('reveal')) {
+        item.classList.add('reveal');
+        item.dataset.revealDelay = i * 120;
+      }
+    });
   }
 
   function init() {
-    initHeroAnimation();
-    initScrollAnimations();
-    initHoverEffects();
+    autoTagRevealElements();
+    initScrollReveal();
   }
 
-  return { init, initHeroAnimation, initScrollAnimations, initHoverEffects };
+  return { init, initScrollReveal, autoTagRevealElements };
 })();

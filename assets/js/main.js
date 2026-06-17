@@ -128,6 +128,8 @@ const App = (() => {
     initMobileMenu();
     initFloatingWA();
     initLightbox();
+    // Init Quick View modal
+    if (typeof QuickView !== 'undefined') QuickView.init();
     // Init animations after a tick to let content render
     requestAnimationFrame(() => {
       if (typeof Animations !== 'undefined') Animations.init();
