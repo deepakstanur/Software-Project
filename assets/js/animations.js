@@ -70,7 +70,7 @@ const Animations = (() => {
     });
 
     // Reel cards
-    ScrollTrigger.batch('.reel-card', {
+    ScrollTrigger.batch('.reels-card', {
       onEnter: (elements) => {
         gsap.from(elements, { opacity: 0, scale: 0.92, duration: 0.5, stagger: 0.08, ease: 'power2.out' });
       },

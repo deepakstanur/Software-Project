@@ -2,59 +2,43 @@
   "reels": [
     {
       "id": "reel-001",
-      "instagramUrl": "https://www.instagram.com/reel/CT2BsncJAl9/",
-      "coverImage": "assets/images/reels/reel-001-cover.webp",
+      "instagramUrl": "https://www.instagram.com/reel/DZjkg0uR2QG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "coverImage": "assets/images/reels/reel-001-cover.png",
       "videoFile": "assets/videos/reels/reel-001.mp4",
-      "caption": "Elegance in every drape",
-      "category": "saree"
+      "caption": "Every story evolves. 🤍\n\nHere’s to new beginnings, timeless elegance, and everything that lies ahead.\n\nIntroducing the new face of Dhalam.\n\n✨ Timeless. Elegant. Yours.",
+      "category": "kurti"
     },
     {
       "id": "reel-002",
-      "instagramUrl": "https://www.instagram.com/reel/C5kyB_HP-pl/",
-      "coverImage": "assets/images/reels/reel-002-cover.webp",
+      "instagramUrl": "https://www.instagram.com/reel/DZphhIbxIPR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "coverImage": "assets/images/reels/reel-002-cover.png",
       "videoFile": "assets/videos/reels/reel-002.mp4",
       "caption": "New arrivals just dropped",
       "category": "kurti"
     },
     {
       "id": "reel-003",
-      "instagramUrl": "https://www.instagram.com/reel/C4QYz1dPrUk/",
-      "coverImage": "assets/images/reels/reel-003-cover.webp",
+      "instagramUrl": "https://www.instagram.com/reel/CS_4vfopWoX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "coverImage": "assets/images/reels/reel-003-cover.png",
       "videoFile": "assets/videos/reels/reel-003.mp4",
-      "caption": "The perfect festive look",
+      "caption": "Coming Soon!!!",
       "category": "kurti"
     },
     {
       "id": "reel-004",
-      "instagramUrl": "https://www.instagram.com/reel/CX2a5l8hFaq/",
-      "coverImage": "assets/images/reels/reel-004-cover.webp",
+      "instagramUrl": "https://www.instagram.com/reel/CWs8Qbmo52_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "coverImage": "assets/images/reels/reel-004-cover.png",
       "videoFile": "assets/videos/reels/reel-004.mp4",
-      "caption": "Drape goals this season",
-      "category": "saree"
+      "caption": "Yellow Cotton Maxi dress 💛 ✨",
+      "category": "kurti"
     },
     {
       "id": "reel-005",
-      "instagramUrl": "https://www.instagram.com/reel/CXoKPc6FjHy/",
-      "coverImage": "assets/images/reels/reel-005-cover.webp",
+      "instagramUrl": "https://www.instagram.com/reel/C4QYz1dPrUk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "coverImage": "assets/images/reels/reel-005-cover.png",
       "videoFile": "assets/videos/reels/reel-005.mp4",
-      "caption": "Curated just for you",
-      "category": "kurti"
-    },
-    {
-      "id": "reel-006",
-      "instagramUrl": "https://www.instagram.com/reel/CUAZtG1JzIs/",
-      "coverImage": "assets/images/reels/reel-006-cover.webp",
-      "videoFile": "assets/videos/reels/reel-006.mp4",
-      "caption": "Handpicked & heartfelt",
+      "caption": "Kota Doriya sarees can be used daily as it is light weight and comfortable. 🌸",
       "category": "saree"
-    },
-    {
-      "id": "reel-007",
-      "instagramUrl": "https://www.instagram.com/reel/CT4hXFuJKLS/",
-      "coverImage": "assets/images/reels/reel-007-cover.webp",
-      "videoFile": "assets/videos/reels/reel-007.mp4",
-      "caption": "Style your story",
-      "category": "kurti"
     }
   ]
 }

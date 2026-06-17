@@ -638,28 +638,52 @@ button { cursor: pointer; font-family: var(--font-ui); border: none; background:
 /* --- Reel Gallery --- */
 .reels-strip {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  padding: 1rem 1.25rem 1.5rem;
+  padding: 1.5rem 1.25rem 2rem;
+  justify-content: flex-start;
 }
 .reels-strip::-webkit-scrollbar { display: none; }
-.reel-card {
+.reels-card {
   scroll-snap-align: start;
   flex: 0 0 auto;
-  width: 180px;
+  width: 170px;
   cursor: pointer;
 }
 .reel-thumb {
-  width: 180px;
-  height: 320px;
+  width: 170px;
+  height: 300px;
   border-radius: 12px;
   background-size: cover;
   background-position: center;
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.reels-card:hover .reel-thumb {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(28, 42, 30, 0.2);
+}
+
+@media (min-width: 768px) {
+  .reels-card {
+    width: 220px;
+  }
+  .reel-thumb {
+    width: 220px;
+    height: 390px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .reels-strip {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .reel-overlay {
   position: absolute;
@@ -671,7 +695,7 @@ button { cursor: pointer; font-family: var(--font-ui); border: none; background:
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.reel-card:hover .reel-overlay { opacity: 1; }
+.reels-card:hover .reel-overlay { opacity: 1; }
 .reel-play-btn {
   width: 52px;
   height: 52px;
@@ -757,6 +781,8 @@ button { cursor: pointer; font-family: var(--font-ui); border: none; background:
   justify-content: center;
 }
 .lightbox-content {
+  position: relative;
+  z-index: 10;
   max-width: 90vw;
   max-height: 85vh;
 }

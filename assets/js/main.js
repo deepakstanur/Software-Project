@@ -106,21 +106,6 @@ const App = (() => {
     if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
     overlay.addEventListener('click', (e) => { if (e.target === overlay) closeLightbox(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-
-    // Reel cards
-    document.querySelectorAll('.reel-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const videoSrc = card.dataset.video;
-        const imgSrc = card.dataset.cover;
-        if (videoSrc) {
-          content.innerHTML = `<video src="${videoSrc}" controls autoplay playsinline style="max-height:85vh;border-radius:8px"></video>`;
-        } else if (imgSrc) {
-          content.innerHTML = `<img src="${imgSrc}" alt="Reel" style="max-height:85vh;border-radius:8px" />`;
-        }
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      });
-    });
   }
 
   /* --- Image Lightbox (product page) --- */

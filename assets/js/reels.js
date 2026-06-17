@@ -12,7 +12,7 @@ async function initReelsSection() {
 
     reels.forEach(reel => {
       const card = document.createElement('div');
-      card.className = 'reel-card';
+      card.className = 'reels-card';
       card.innerHTML = `
         <div class="reel-thumb" style="background-image: url('${reel.coverImage}')">
           <div class="reel-overlay">
@@ -47,27 +47,34 @@ function openReelLightbox(reel) {
   // Try to load local video
   const localVideo = reel.videoFile;
   
-  // Check if local video path is valid (file exists)
-  // Strategy: attempt to fetch HEAD request — if 404, redirect to Instagram
-  fetch(localVideo, { method: 'HEAD' })
-    .then(res => {
-      if (res.ok) {
-        // Local video available — play it
-        videoEl.src = localVideo;
-        videoEl.style.display = 'block';
-        instagramLink.style.display = 'none';
-        videoEl.load();
-        videoEl.play();
-      } else {
-        throw new Error('Local video not found');
-      }
-    })
-    .catch(() => {
-      // Local video not available — show Instagram link option
-      videoEl.style.display = 'none';
-      instagramLink.href = reel.instagramUrl;
-      instagramLink.style.display = 'flex';
-    });
+  if (!localVideo) {
+    // Local video not available — show Instagram link option
+    videoEl.style.display = 'none';
+    instagramLink.href = reel.instagramUrl;
+    instagramLink.style.display = 'flex';
+  } else {
+    // Check if local video path is valid (file exists)
+    // Strategy: attempt to fetch HEAD request — if 404, redirect to Instagram
+    fetch(localVideo, { method: 'HEAD' })
+      .then(res => {
+        if (res.ok) {
+          // Local video available — play it
+          videoEl.src = localVideo;
+          videoEl.style.display = 'block';
+          instagramLink.style.display = 'none';
+          videoEl.load();
+          videoEl.play();
+        } else {
+          throw new Error('Local video not found');
+        }
+      })
+      .catch(() => {
+        // Local video not available — show Instagram link option
+        videoEl.style.display = 'none';
+        instagramLink.href = reel.instagramUrl;
+        instagramLink.style.display = 'flex';
+      });
+  }
 
   lightbox.classList.add('active');
   document.body.style.overflow = 'hidden';
