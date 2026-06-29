@@ -44,12 +44,221 @@
         "assets/images/products/krt-001/pomelli_catalog-2.png",
         "assets/images/products/krt-001/pomelli_catalog-3.png",
         "assets/images/products/krt-001/pomelli_catalog-4.png",
-        "assets/images/products/krt-001/pomelli_catalog-5.png"
+        "assets/images/products/krt-001/pomelli_catalog-5.png",
+        "assets/images/products/krt-001/pomelli_photoshoot-1.png",
+        "assets/images/products/krt-001/pomelli_photoshoot-2.png"
+      ],
+      "stockStatus": "out_of_stock",
+      "stockCount": 1,
+      "hotSelling": true,
+      "newArrival": true,
+      "featured": false
+    },
+    {
+      "id": "krt-009",
+      "name": "Circular Mandala Print Cotton Cord Set",
+      "slug": "Circular Mandala Print Cotton Cord Set",
+      "category": "kurtis",
+      "subcategory": "Cord Set",
+      "price": 1499,
+      "originalPrice": 1799,
+      "currency": "₹",
+      "fabric": "Cotton",
+      "occasion": [
+        "Festive",
+        "Casual",
+        "Daily Wear"
+      ],
+      "description": "Refresh your ethnic wardrobe with the Indigo Mandala Straight Kurta Set, featuring elegant geometric buti prints, coordinated printed pants, and a timeless straight silhouette. Designed for comfort and effortless sophistication, this versatile ensemble is perfect for office wear, casual outings, festive gatherings, and everyday ethnic styling.Available now in Black Also",
+      "careInstructions": "Hand wash separately in cold water. Do not bleach. Dry in shade. Iron on medium heat.",
+      "sizes": [
+        {
+          "size": "S",
+          "available": true
+        },
+        {
+          "size": "M",
+          "available": true
+        },
+        {
+          "size": "L",
+          "available": true
+        },
+        {
+          "size": "XL",
+          "available": true
+        },
+        {
+          "size": "XXL",
+          "available": true
+        }
+      ],
+      "images": [
+        "assets/images/products/krt-009/pomelli_photoshoot-4.png",
+        "assets/images/products/krt-009/pomelli_catalog-2.png",
+        "assets/images/products/krt-009/pomelli_catalog-3.png",
+        "assets/images/products/krt-009/pomelli_catalog-4.png",
+        "assets/images/products/krt-009/pomelli_catalog-5.png",
+        "assets/images/products/krt-009/pomelli_photoshoot-1.png"
+      ],
+      "stockStatus": "out_of_stock",
+      "stockCount": 1,
+      "hotSelling": true,
+      "newArrival": true,
+      "featured": false
+    },
+    {
+      "id": "krt-008",
+      "name": "Abstract Floral Print Cotton Kurta Set",
+      "slug": "Abstract Floral Print Cotton Kurta Set",
+      "category": "kurtis",
+      "subcategory": "Cord Set",
+      "price": 1499,
+      "originalPrice": 1799,
+      "currency": "₹",
+      "fabric": "Cotton",
+      "occasion": [
+        "Everyday Elegance",
+        "Workwear Collection",
+        "Contemporary Ethnic Wear"
+      ],
+      "description": "Refresh your ethnic wardrobe with this elegant Indigo Botanica Straight Kurta Set, featuring delicate botanical vine prints, coordinated chevron-patterned pants, and a flattering straight silhouette. Crafted for all-day comfort and timeless style, this versatile ensemble is ideal for office wear, casual outings, festive gatherings, and everyday elegance.",
+      "careInstructions": "Hand wash separately in cold water. Do not bleach. Dry in shade. Iron on medium heat.",
+      "sizes": [
+        {
+          "size": "S",
+          "available": true
+        },
+        {
+          "size": "M",
+          "available": true
+        },
+        {
+          "size": "L",
+          "available": true
+        },
+        {
+          "size": "XL",
+          "available": true
+        },
+        {
+          "size": "XXL",
+          "available": true
+        }
+      ],
+      "images": [
+        "assets/images/products/krt-008/pomelli_photoshoot-2.png",
+        "assets/images/products/krt-008/pomelli_catalog-2.png",
+        "assets/images/products/krt-008/pomelli_catalog-3.png",
+        "assets/images/products/krt-008/pomelli_catalog-4.png",
+        "assets/images/products/krt-008/pomelli_catalog-5.png"
       ],
       "stockStatus": "in_stock",
       "stockCount": 1,
       "hotSelling": true,
       "newArrival": true,
+      "featured": true
+    },
+    {
+      "id": "krt-007",
+      "name": "Floral Vine Print Cotton Kurta Set",
+      "slug": "Floral Vine Print Cotton Kurta Set",
+      "category": "kurtis",
+      "subcategory": "Cord Set",
+      "price": 1499,
+      "originalPrice": 1799,
+      "currency": "₹",
+      "fabric": "Cotton",
+      "occasion": [
+        "Festive Kurta Set",
+        "Contemporary Ethnic Wear",
+        "Straight Fit Kurta Set"
+      ],
+      "description": "Elevate your ethnic wardrobe with this elegant maroon straight kurta set featuring luxurious gold foil botanical prints, coordinated chevron-patterned pants, and a graceful beige dupatta. Crafted for timeless sophistication, this three-piece ensemble is perfect for festive celebrations, office wear, family gatherings, and special occasions.",
+      "careInstructions": "Hand wash separately in cold water. Do not bleach. Dry in shade. Iron on medium heat.",
+      "sizes": [
+        {
+          "size": "S",
+          "available": true
+        },
+        {
+          "size": "M",
+          "available": true
+        },
+        {
+          "size": "L",
+          "available": true
+        },
+        {
+          "size": "XL",
+          "available": true
+        },
+        {
+          "size": "XXL",
+          "available": true
+        }
+      ],
+      "images": [
+        "assets/images/products/krt-007/pomelli_photoshoot-1.png",
+        "assets/images/products/krt-007/pomelli_photoshoot-2.png",
+        "assets/images/products/krt-007/pomelli_photoshoot-3.png",
+        "assets/images/products/krt-007/pomelli_photoshoot-4.png"
+      ],
+      "stockStatus": "in_stock",
+      "stockCount": 1,
+      "hotSelling": true,
+      "newArrival": false,
+      "featured": false
+    },
+    {
+      "id": "krt-006",
+      "name": "Espresso Brown with Terracotta Floral Print Kurta Set",
+      "slug": "Espresso Brown with Terracotta Floral Print Kurta Set",
+      "category": "kurtis",
+      "subcategory": "Cord Set",
+      "price": 1499,
+      "originalPrice": 1799,
+      "currency": "₹",
+      "fabric": "Cotton",
+      "occasion": [
+        "Festive",
+        "Casual",
+        "Daily Wear"
+      ],
+      "description": "A sophisticated espresso brown straight kurta set featuring delicate floral prints, coordinated straight-fit pants, and an intricately printed dupatta. Designed for effortless elegance and everyday comfort, this two piece ethnic ensemble is ideal for office wear, festive occasions, and casual celebrations.",
+      "careInstructions": "Hand wash separately in cold water. Do not bleach. Dry in shade. Iron on medium heat.",
+      "sizes": [
+        {
+          "size": "S",
+          "available": true
+        },
+        {
+          "size": "M",
+          "available": true
+        },
+        {
+          "size": "L",
+          "available": true
+        },
+        {
+          "size": "XL",
+          "available": true
+        },
+        {
+          "size": "XXL",
+          "available": true
+        }
+      ],
+      "images": [
+        "assets/images/products/krt-006/pomelli_photoshoot-1.png",
+        "assets/images/products/krt-006/pomelli_photoshoot-2.png",
+        "assets/images/products/krt-006/pomelli_photoshoot-3.png",
+        "assets/images/products/krt-006/pomelli_photoshoot-4.png"
+      ],
+      "stockStatus": "in_stock",
+      "stockCount": 1,
+      "hotSelling": true,
+      "newArrival": false,
       "featured": false
     },
     {
@@ -100,7 +309,7 @@
       "stockStatus": "in_stock",
       "stockCount": 2,
       "hotSelling": true,
-      "newArrival": true,
+      "newArrival": false,
       "featured": false
     },
     {
