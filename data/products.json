@@ -173,7 +173,7 @@
         "Contemporary Ethnic Wear",
         "Straight Fit Kurta Set"
       ],
-      "description": "Elevate your ethnic wardrobe with this elegant maroon straight kurta set featuring luxurious gold foil botanical prints, coordinated chevron-patterned pants, and a graceful beige dupatta. Crafted for timeless sophistication, this three-piece ensemble is perfect for festive celebrations, office wear, family gatherings, and special occasions.",
+      "description": "Elevate your ethnic wardrobe with this elegant maroon straight kurta set featuring luxurious gold foil botanical prints, coordinated chevron-patterned pants, and a graceful beige dupatta. Crafted for timeless sophistication, this two-piece ensemble is perfect for festive celebrations, office wear, family gatherings, and special occasions.",
       "careInstructions": "Hand wash separately in cold water. Do not bleach. Dry in shade. Iron on medium heat.",
       "sizes": [
         {
@@ -199,9 +199,9 @@
       ],
       "images": [
         "assets/images/products/krt-007/pomelli_photoshoot-1.png",
-        "assets/images/products/krt-007/pomelli_photoshoot-2.png",
+        "assets/images/products/krt-007/pomelli_photoshoot_2.png",
         "assets/images/products/krt-007/pomelli_photoshoot-3.png",
-        "assets/images/products/krt-007/pomelli_photoshoot-4.png"
+        "assets/images/products/krt-007/pomelli_photoshoot_4.png"
       ],
       "stockStatus": "in_stock",
       "stockCount": 1,
@@ -251,8 +251,8 @@
       "images": [
         "assets/images/products/krt-006/pomelli_photoshoot-1.png",
         "assets/images/products/krt-006/pomelli_photoshoot-2.png",
-        "assets/images/products/krt-006/pomelli_photoshoot-3.png",
-        "assets/images/products/krt-006/pomelli_photoshoot-4.png"
+        "assets/images/products/krt-006/pomelli_photoshoot_image_9_16_0629 (2).png",
+        "assets/images/products/krt-006/pomelli_photoshoot_image_9_16_0629 (3).png"
       ],
       "stockStatus": "in_stock",
       "stockCount": 1,
@@ -368,8 +368,8 @@
       "slug": "Green Hakkoba Floral Long Kurta",
       "category": "kurtis",
       "subcategory": "Long Kurta",
-      "price": 1199,
-      "originalPrice": 1499,
+      "price": 999,
+      "originalPrice": 1299,
       "currency": "₹",
       "fabric": "Cotton",
       "occasion": [
