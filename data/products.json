@@ -198,10 +198,10 @@
         }
       ],
       "images": [
+        "assets/images/products/krt-007/pomelli_photoshoot_4.png",
         "assets/images/products/krt-007/pomelli_photoshoot-1.png",
         "assets/images/products/krt-007/pomelli_photoshoot_2.png",
-        "assets/images/products/krt-007/pomelli_photoshoot-3.png",
-        "assets/images/products/krt-007/pomelli_photoshoot_4.png"
+        "assets/images/products/krt-007/pomelli_photoshoot-3.png"
       ],
       "stockStatus": "in_stock",
       "stockCount": 1,
